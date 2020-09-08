@@ -1,5 +1,5 @@
 import { createStackNavigator } from 'react-navigation-stack';
-import LoginScreen from '../../components/screens/Login';
+import LoginScreen from '@components/screens/Login';
 
 export default createStackNavigator(
   {

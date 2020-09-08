@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { StatusBar } from 'react-native';
 import { AppLoading } from 'expo';
-import { connect } from './common/Helpers';
-import store from '../store';
+import { connect } from '@components/common/Helpers';
+import store from '@store';
 import RootNavigator from '../navigation/RootNavigator';
 
 const App = ({ initialize }) => {

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Icon } from '../components/common/Layout';
-import { colors } from '../components/common/theme';
+import { Icon } from '@components/common/Layout';
+import { colors } from '@components/common/theme';
 
 export default ({ lightContent, ...props }) => (
   <Icon

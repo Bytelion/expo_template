@@ -5,7 +5,7 @@ import {
   TransitionPresets,
 } from 'react-navigation-stack';
 import { isEmpty } from 'lodash';
-import store from '../../store';
+import store from '@store';
 import HomeNavigator from '../HomeNavigator';
 import AuthNavigator from '../AuthNavigator';
 
@@ -15,9 +15,8 @@ const MainNavigator = createStackNavigator(
   },
   {
     headerMode: 'none',
-    transparentCard: true,
     defaultNavigationOptions: {
-      gesturesEnabled: false,
+      gestureEnabled: false,
     },
   }
 );

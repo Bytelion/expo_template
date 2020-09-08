@@ -1,6 +1,6 @@
 import { AsyncStorage } from 'react-native';
 import { isEmpty } from 'lodash';
-import { authService } from '../../services';
+import { authService } from '@services';
 import actionTypes from './types';
 
 const loadAuth = () => async dispatch => {

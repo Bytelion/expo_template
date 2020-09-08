@@ -1,36 +1,10 @@
 import React, { useState, Fragment } from 'react';
-import { StyleSheet, Alert } from 'react-native';
-import { connect } from '../../common/Helpers';
-import { colors, device } from '../../common/theme';
-import { Image } from '../../common/Image';
-import { Icon, Row, Touchable, View } from '../../common/Layout';
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: colors.smokeyWhite,
-    flex: 1,
-  },
-  image: {
-    height: '90%',
-    marginLeft: device.width * 0.25,
-    width: '50%',
-  },
-  logout: {
-    marginLeft: 'auto',
-    marginRight: 10,
-  },
-  statusBar: {
-    backgroundColor: colors.primaryBlue,
-    height: device.statusBarHeight,
-  },
-  topBar: {
-    alignItems: 'center',
-    borderBottomWidth: 1,
-    borderColor: colors.darkGray,
-    height: 100,
-    justifyContent: 'center',
-  },
-});
+import { Alert } from 'react-native';
+import { connect } from '@components/common/Helpers';
+import { colors, device } from '@components/common/theme';
+import { Image } from '@components/common/Image';
+import { Icon, Row, Touchable, View } from '@components/common/Layout';
+import styles from './styles';
 
 const HomeScreen = ({ getProduct, navigation, removeAuth }) => {
   const logout = () => {
