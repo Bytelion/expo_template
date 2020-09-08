@@ -1,5 +1,9 @@
-import { Animated, Easing } from 'react-native';
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { Easing } from 'react-native';
+import { createAppContainer } from 'react-navigation';
+import {
+  createStackNavigator,
+  TransitionPresets,
+} from 'react-navigation-stack';
 import { isEmpty } from 'lodash';
 import store from '../../store';
 import HomeNavigator from '../HomeNavigator';
@@ -28,19 +32,10 @@ export default createAppContainer(
       initialRouteName: 'Auth',
       headerMode: 'none',
       defaultNavigationOptions: {
-        gesturesEnabled: false,
+        cardOverlayEnabled: true,
+        gestureEnabled: false,
       },
-      transitionConfig: () => {
-        if (isEmpty(store.getState().auth.authToken)) {
-          return null;
-        }
-        return {
-          transitionSpec: {
-            timing: Animated.timing,
-            easing: Easing.step0,
-          },
-        };
-      },
+      ...TransitionPresets.ModalPresentationIOS,
     }
   )
 );

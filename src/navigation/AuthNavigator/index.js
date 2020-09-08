@@ -1,4 +1,4 @@
-import { createStackNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 import LoginScreen from '../../components/screens/Login';
 
 export default createStackNavigator(
@@ -6,14 +6,14 @@ export default createStackNavigator(
     Auth: {
       screen: LoginScreen,
       navigationOptions: () => ({
-        header: null,
+        headerShown: false,
       }),
     },
   },
   {
     initialRouteName: 'Auth',
     defaultNavigationOptions: {
-      gesturesEnabled: false,
+      gestureEnabled: false,
       headerBackTitle: null,
       headerStyle: {
         borderBottomWidth: 0,
