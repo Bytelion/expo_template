@@ -26,18 +26,24 @@ const setError = error =>
 client.interceptors.request.use(
   config => {
     requestPending(true);
+
     const { auth } = store.getState();
+
     Object.assign(config.headers, {
       Authorization: `bearer ${auth.authToken}`,
     });
+
     return config;
   },
   error => {
     requestPending(false);
+
     if (error && error.response) {
       const { data } = error.response;
+
       setError(data);
     }
+
     return Promise.reject();
   }
 );
@@ -46,14 +52,18 @@ client.interceptors.request.use(
 client.interceptors.response.use(
   response => {
     requestPending(false);
+
     return response;
   },
   error => {
     requestPending(false);
+
     if (error && error.response) {
       const { data } = error.response;
+
       setError(data);
     }
+
     return Promise.reject();
   }
 );

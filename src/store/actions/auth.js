@@ -6,9 +6,11 @@ import actionTypes from './types';
 const loadAuth = () => async dispatch => {
   const storedItems = {};
   const asyncStorage = await AsyncStorage.multiGet(['username', 'authToken']);
+
   asyncStorage.map(array =>
     Object.assign(storedItems, { [array[0]]: array[1] })
   );
+
   dispatch({
     type: actionTypes.SET_AUTH,
     payload: {
@@ -28,6 +30,7 @@ const authenticate = data => async dispatch => {
     ['username', username],
     ['authToken', authToken],
   ]);
+
   dispatch({
     type: actionTypes.SET_AUTH,
     payload: {
