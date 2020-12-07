@@ -35,5 +35,18 @@
   },
   "env": {
     "react-native/react-native": true
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@config", "./src/config"],
+          ["@components", "./src/components"],
+          ["@services", "./src/services"],
+          ["@store", "./src/store"]
+        ],
+        "extensions": [".js"]
+      }
+    }
   }
 }
