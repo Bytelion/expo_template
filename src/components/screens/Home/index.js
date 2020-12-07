@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { Alert } from 'react-native';
 import { connect } from '@components/common/Helpers';
 import { colors, device } from '@components/common/theme';
@@ -6,7 +6,7 @@ import { Image } from '@components/common/Image';
 import { Icon, Row, Touchable, View } from '@components/common/Layout';
 import styles from './styles';
 
-const HomeScreen = ({ getProduct, navigation, removeAuth }) => {
+const HomeScreen = ({ navigation, removeAuth }) => {
   const logout = () => {
     Alert.alert('Logout', `Are you sure you would like to logout?`, [
       { text: 'No', style: 'cancel' },

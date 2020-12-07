@@ -1,11 +1,8 @@
-import { Easing } from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import {
   createStackNavigator,
   TransitionPresets,
 } from 'react-navigation-stack';
-import { isEmpty } from 'lodash';
-import store from '@store';
 import HomeNavigator from '../HomeNavigator';
 import AuthNavigator from '../AuthNavigator';
 

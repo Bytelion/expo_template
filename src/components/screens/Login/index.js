@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Keyboard, TouchableWithoutFeedback } from 'react-native';
 import { isEmpty } from 'lodash';
 import { connect } from '@components/common/Helpers';
-import { colors, device } from '@components/common/theme';
+import { colors } from '@components/common/theme';
 import { Image } from '@components/common/Image';
 import {
   Button,
@@ -14,12 +14,7 @@ import {
 } from '@components/common/Layout';
 import styles from './styles';
 
-const LoginScreen = ({
-  authenticate,
-  hasAuth,
-  navigation,
-  username: lastUsername,
-}) => {
+const LoginScreen = ({ hasAuth, navigation, username: lastUsername }) => {
   const [username, setUsername] = useState(lastUsername);
   const [password, setPassword] = useState('');
   const [errorText, setErrorText] = useState('');
