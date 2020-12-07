@@ -22,7 +22,6 @@ const HomeScreen = ({ navigation, removeAuth }) => {
 
   return (
     <Fragment>
-      <View style={styles.statusBar} />
       <Row style={styles.topBar}>
         <Image name="appIcon" style={styles.image} />
         <Touchable onPress={() => logout()} style={styles.logout}>
