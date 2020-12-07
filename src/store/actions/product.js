@@ -1,4 +1,4 @@
-import { productService } from '../../services';
+import { productService } from '@services';
 
 const getProduct = sku => async () => {
   const result = await productService.getProduct(sku);

@@ -1,11 +1,11 @@
-import { createStackNavigator } from 'react-navigation';
-import HomeScreen from '../../components/screens/Home';
+import { createStackNavigator } from 'react-navigation-stack';
+import HomeScreen from '@components/screens/Home';
 
 export default createStackNavigator({
   Home: {
     screen: HomeScreen,
     navigationOptions: () => ({
-      header: null,
+      headerShown: false,
     }),
   },
 });

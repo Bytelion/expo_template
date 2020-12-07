@@ -1,9 +1,9 @@
-import React, { useState, Fragment } from 'react';
-import { StyleSheet, Keyboard, TouchableWithoutFeedback } from 'react-native';
+import React, { useState } from 'react';
+import { Keyboard, TouchableWithoutFeedback } from 'react-native';
 import { isEmpty } from 'lodash';
-import { connect } from '../../common/Helpers';
-import { colors, device } from '../../common/theme';
-import { Image } from '../../common/Image';
+import { connect } from '@components/common/Helpers';
+import { colors, device } from '@components/common/theme';
+import { Image } from '@components/common/Image';
 import {
   Button,
   Input,
@@ -11,57 +11,8 @@ import {
   Text,
   View,
   Row,
-} from '../../common/Layout';
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: colors.smokeyWhite,
-    justifyContent: 'center',
-    marginHorizontal: 20,
-  },
-  defaultBorder: {
-    borderColor: colors.mediumGray,
-    borderWidth: 1,
-  },
-  errorBorder: {
-    borderColor: colors.warn,
-    borderWidth: 2,
-  },
-  errorText: {
-    color: colors.warn,
-  },
-  image: {
-    height: '90%',
-    width: '50%',
-  },
-  input: {
-    backgroundColor: colors.white,
-    borderRadius: 22.5,
-    color: colors.black,
-    fontSize: 16,
-    height: 45,
-    marginVertical: 5,
-    paddingBottom: 2,
-    paddingHorizontal: 15,
-    paddingTop: 4.5,
-    width: '100%',
-  },
-  scrollView: {
-    flexGrow: 1,
-    justifyContent: 'center',
-  },
-  statusBar: {
-    backgroundColor: colors.primaryBlue,
-    height: device.statusBarHeight,
-  },
-  topBar: {
-    alignItems: 'center',
-    borderBottomWidth: 1,
-    borderColor: colors.darkGray,
-    height: 100,
-    justifyContent: 'center',
-  },
-});
+} from '@components/common/Layout';
+import styles from './styles';
 
 const LoginScreen = ({
   authenticate,
@@ -112,14 +63,14 @@ const LoginScreen = ({
   };
 
   return (
-    <Fragment>
+    <View style={styles.container}>
       <View style={styles.statusBar} />
       <Row style={styles.topBar}>
         <Image name="appIcon" style={styles.image} />
       </Row>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-          <View style={styles.container}>
+          <View style={styles.scrollContainer}>
             <Text style={styles.errorText}>{errorText}</Text>
             <Input
               placeholder="Username"
@@ -149,7 +100,7 @@ const LoginScreen = ({
           </View>
         </TouchableWithoutFeedback>
       </ScrollView>
-    </Fragment>
+    </View>
   );
 };
 

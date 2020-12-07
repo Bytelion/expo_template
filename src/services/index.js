@@ -1,7 +1,7 @@
 import axios from 'axios';
-import appConfig from '../config';
-import store from '../store';
-import actionTypes from '../store/actions/types';
+import appConfig from '@config';
+import store from '@store';
+import actionTypes from '@store/actions/types';
 
 const client = axios.create(appConfig.api);
 

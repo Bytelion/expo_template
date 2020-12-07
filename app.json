@@ -4,7 +4,6 @@
     "icon": "./src/assets/images/appIcon.png",
     "slug": "ExpoTemplate",
     "privacy": "unlisted",
-    "sdkVersion": "35.0.0",
     "entryPoint": "./src/index.js",
     "platforms": [
       "ios",
