@@ -41,7 +41,7 @@ const App = ({ initialize, handleNotification }) => {
     // This listener is fired whenever a user taps on or interacts with a notification (works when app is foregrounded, backgrounded, or killed)
     responseListener.current = Notifications.addNotificationResponseReceivedListener(
       response => {
-        // TODO: Handle user action to notification
+        handleNotification(response.notification);
       }
     );
 
@@ -65,7 +65,7 @@ const App = ({ initialize, handleNotification }) => {
     return (
       <AppLoading
         startAsync={initializeAppAsync}
-        onFinish={() => setAppReady(true)}
+        onFinish={onFinish}
         onError={() => {
           // Handle Error Logs Here
         }}

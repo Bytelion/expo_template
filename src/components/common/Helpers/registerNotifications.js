@@ -16,9 +16,9 @@ export default async () => {
     if (finalStatus !== 'granted') {
       return;
     }
-    const token = (await Notifications.getExpoPushTokenAsync()).data;
 
     // POST the token to your backend server from where you can retrieve it to send push notifications.
-    //userService.updatePushToken(token);
+    const token = (await Notifications.getExpoPushTokenAsync()).data;
+    // userService.updatePushToken(token);
   }
 };
