@@ -1,0 +1,67 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/node:14.9.0
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore yarn package cache
+          key: v1-cache-dependencies-{{ checksum "yarn.lock" }}-{{ checksum "package.json" }}-{{ arch }}
+      - run:
+          name: Install dependencies
+          command: yarn install --frozen-lockfile
+      - run:
+          name: Install dev dependencies
+          command: yarn install --dev --frozen-lockfile
+      - save_cache:
+          name: Save yarn package cache
+          paths:
+            - ~/.cache/yarn
+          key: v1-cache-dependencies-{{ checksum "yarn.lock" }}-{{ checksum "package.json" }}-{{ arch }}
+      - run:
+          name: Run tests
+          command: npx jest --ci --passWithNoTests --silent
+      - run:
+          name: Run linting
+          command: yarn run lint
+  #publish_to_expo:
+  #  working_directory: ~/repo
+  #  docker:
+  #    - image: circleci/node:14.9.0
+  #  steps:
+  #    - checkout
+  #    - restore_cache:
+  #        name: Restore yarn package cache
+  #        key: v1-cache-dependencies-{{ checksum "yarn.lock" }}-{{ checksum "package.json" }}-{{ arch }}
+  #    - run:
+  #        name: Installing dependencies
+  #        command: yarn install --frozen-lockfile
+  #    - save_cache:
+  #        name: Save yarn package cache
+  #        paths:
+  #          - ~/.cache/yarn
+  #        key: v1-cache-dependencies-{{ checksum "yarn.lock" }}-{{ checksum "package.json" }}-{{ arch }}
+  #    - run:
+  #        name: Login into Expo
+  #        command: npx expo-cli login -u $EXPO_USERNAME -p $EXPO_PASSWORD
+  #    - run:
+  #        name: Save current branch name to an env variable
+  #        command: |
+  #          if [ "${CIRCLE_BRANCH}" == "master" ]; then
+  #            echo 'export EXPO_RELEASE_CHANNEL="default"' >> $BASH_ENV
+  #          else
+  #            echo 'export LOWERCASE_BRANCH=`echo "$CIRCLE_BRANCH" | tr "[A-Z]" "[a-z]"`' >> $BASH_ENV
+  #            echo 'export EXPO_RELEASE_CHANNEL=$LOWERCASE_BRANCH' >> $BASH_ENV
+  #          fi
+  #    - run:
+  #        name: Publish to Expo
+  #        command: npx expo-cli publish --non-interactive --max-workers 1 --release-channel $EXPO_RELEASE_CHANNEL
+workflows:
+  version: 2
+  build-and-publish:
+    jobs:
+      - build
+      #- publish_to_expo:
+      #    requires:
+      #          - build
