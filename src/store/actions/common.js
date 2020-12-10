@@ -4,6 +4,7 @@ import { loadAuth } from './auth';
 const initialize = () => dispatch => {
   // Resolve auth prior to subsequent promises
   const authPromise = new Promise(resolve => resolve(dispatch(loadAuth())));
+
   return authPromise.then(() => null);
 };
 
