@@ -1,27 +1,26 @@
 import React, { useState } from 'react';
-import { Keyboard, TouchableWithoutFeedback } from 'react-native';
+import Constants from 'expo-constants';
 import { isEmpty } from 'lodash';
 import { connect } from '@components/common/Helpers';
 import { colors } from '@components/common/theme';
-import { Image } from '@components/common/Image';
 import {
   Button,
   Input,
   ScrollView,
-  Text,
   View,
-  Row,
+  Text,
+  Touchable,
 } from '@components/common/Layout';
 import styles from './styles';
 
 const LoginScreen = ({ hasAuth, navigation, username: lastUsername }) => {
   const [username, setUsername] = useState(lastUsername);
   const [password, setPassword] = useState('');
-  const [errorText] = useState('');
   const [usernameError, setUsernameError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
 
   const navigateHome = () => navigation.navigate('Home');
+  const navigateSignUp = () => navigation.navigate('SignUp');
 
   // Navigate to home screen if the authToken already exists
   if (hasAuth) {
@@ -30,70 +29,55 @@ const LoginScreen = ({ hasAuth, navigation, username: lastUsername }) => {
 
   const handleLogin = async () => {
     if (isEmpty(username) || isEmpty(password)) {
-      if (isEmpty(username)) {
-        setUsernameError(true);
-      }
-      if (isEmpty(password)) {
-        setPasswordError(true);
-      }
+      setUsernameError(isEmpty(username));
+      setPasswordError(isEmpty(password));
       return;
     }
 
     // For test purposes allowing nav without authToken
     // REMOVE IN PROJECT
     navigateHome();
-    /*
-    await authenticate({ username, password })
-      .then(() => {
-        navigateHome();
-        setErrorText('');
-        return true;
-      })
-      .catch(() =>
-        setErrorText(
-          'The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.'
-        )
-      );
-    */
   };
 
   return (
     <View style={styles.container}>
       <View style={styles.statusBar} />
-      <Row style={styles.topBar}>
-        <Image name="appIcon" style={styles.image} />
-      </Row>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-          <View style={styles.scrollContainer}>
-            <Text style={styles.errorText}>{errorText}</Text>
+        <View style={styles.scrollContainer}>
+          <Text style={styles.title}>{Constants.manifest.name}</Text>
+          <Text style={styles.subTitle}>Sign In</Text>
+          <View style={styles.inputContainer}>
             <Input
               placeholder="Username"
-              style={[
-                usernameError ? styles.errorBorder : styles.defaultBorder,
-                styles.input,
-              ]}
               onChangeText={text => setUsername(text)}
               value={username}
+              error={usernameError}
             />
             <Input
               placeholder="Password"
-              style={[
-                passwordError ? styles.errorBorder : styles.defaultBorder,
-                styles.input,
-              ]}
               onChangeText={text => setPassword(text)}
               value={password}
+              error={passwordError}
               secure
             />
-            <Button
-              onPress={handleLogin}
-              title="Login"
-              color={colors.primaryBlue}
-              textStyle={styles.loginText}
-            />
           </View>
-        </TouchableWithoutFeedback>
+          <View style={styles.forgotContainer}>
+            <Touchable>
+              <Text style={styles.forgot}>Forgot Password?</Text>
+            </Touchable>
+          </View>
+          <Button
+            onPress={handleLogin}
+            title="Sign In"
+            color={colors.primary}
+          />
+          <View style={styles.signUp}>
+            <Text style={styles.noAccount}>No Account?</Text>
+            <Touchable onPress={navigateSignUp}>
+              <Text style={styles.createOne}>Create one here!</Text>
+            </Touchable>
+          </View>
+        </View>
       </ScrollView>
     </View>
   );
