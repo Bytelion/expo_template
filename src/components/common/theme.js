@@ -23,30 +23,15 @@ const variables = {
 
 const colors = {
   // App
-  primaryBlue: '#0166A4',
-  primaryOrange: '#ff7426',
-  primaryGreen: '#00796B',
-  secondaryBlue: '#0077bd',
-  skyBlue: '#e1f5fe',
-  waterBlue: '#b0cff4',
-  darkBlue: '#02579b',
-  landBrown: '#eedfc9',
+  primary: '#00796b',
+  background: '#777777',
+  primaryText: '#b3ffffff',
+  secondaryText: '#fff',
+  placeholderText: '#999',
   // General
-  aztec: '#2a383a',
-  zambezi: '#585858',
-  success: '#4bb543',
-  warn: '#d85a42',
-  yellow: '#ffff40',
   white: '#fff',
-  red: '#f80102',
-  smokeyWhite: 'rgba(255,255,255,0.7)',
-  black: '#000',
-  charcoal: '#282828',
-  darkGray: '#929292',
-  gray: '#ccc',
-  mediumGray: '#dfdfdf',
-  lightGray: '#f5f5f5',
-  fbBlue: '#3b5998',
+  warn: '#ff0000',
+  transparent: 'transparent',
 };
 
 const boxShadow = {

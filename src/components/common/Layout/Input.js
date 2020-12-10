@@ -1,11 +1,10 @@
 import React, { PureComponent } from 'react';
 import { StyleSheet, TextInput } from 'react-native';
-import { variables, colors } from '../theme';
+import { colors } from '../theme';
 
 const styles = StyleSheet.create({
   default: {
-    borderColor: colors.mediumGray,
-    borderWidth: 1,
+    borderWidth: 0,
   },
   error: {
     borderColor: colors.warn,
@@ -13,15 +12,14 @@ const styles = StyleSheet.create({
   },
   input: {
     backgroundColor: colors.white,
-    borderRadius: 22.5,
+    borderRadius: 18,
     color: colors.black,
-    fontSize: variables.fontSize,
-    height: 45,
-    marginVertical: 5,
-    paddingBottom: 2,
+    fontSize: 12,
+    height: 36,
+    letterSpacing: 0,
+    lineHeight: 16,
     paddingHorizontal: 15,
-    paddingTop: 4.5,
-    width: '100%',
+    paddingVertical: 10,
   },
 });
 
@@ -37,6 +35,9 @@ class Input extends PureComponent {
       height,
       returnKeyType,
       style,
+      placeholder = '',
+      placeholderUpper = true,
+      textStyle,
       ...props
     } = this.props;
     return (
@@ -44,10 +45,12 @@ class Input extends PureComponent {
         value={value}
         keyboardType={keyboardType || 'default'}
         secureTextEntry={secure}
-        placeholderTextColor={error && 'rgba(216,90,66,0.5)'}
+        placeholderTextColor={error ? colors.warn : colors.placeholderText}
         maxLength={50}
         returnKeyType={returnKeyType || 'done'}
         style={[error ? styles.error : styles.default, styles.input, style]}
+        placeholder={placeholderUpper ? placeholder.toUpperCase() : placeholder}
+        textStyle={[styles.text, textStyle]}
         {...props}
       />
     );

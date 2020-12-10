@@ -2,6 +2,7 @@ import React from 'react';
 import { render, waitFor, cleanup } from 'react-native-testing-library';
 import {
   Button,
+  CheckBox,
   Icon,
   Input,
   Row,
@@ -18,6 +19,13 @@ test('Button', async () => {
   await waitFor(() => button);
   expect(button).toBeTruthy();
   expect(button.toJSON()).toMatchSnapshot();
+});
+
+test('CheckBox', async () => {
+  const checkBox = await render(<CheckBox />);
+  await waitFor(() => checkBox);
+  expect(checkBox).toBeTruthy();
+  expect(checkBox.toJSON()).toMatchSnapshot();
 });
 
 test('Icon', async () => {

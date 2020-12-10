@@ -24,7 +24,7 @@ The following is run when a commit is pushed to GitHub. Currently the publish jo
 ### Expo Publish Job
 Builds can be found for successful publish jobs at the following link (replace the release-channel value with the branch name, default is the value for master):
 
-[https://expo.io/@samegrain/samegrain?release-channel=development](https://expo.io/@samegrain/samegrain?release-channel=development)
+[https://expo.io/@username/app_name?release-channel=development](https://expo.io/@username/app_name?release-channel=development)
 
 * Master Branch
   * Publishes the app the the default Expo environment

@@ -23,9 +23,9 @@ export default ({
       },
       contentContainerStyle,
     ]}
-    keyboardShouldPersistTaps="always"
+    keyboardShouldPersistTaps="handled"
     showsVerticalScrollIndicator={showsVerticalScrollIndicator || false}
-    extraScrollHeight={100}
+    extraScrollHeight={150}
     enableResetScrollToCoords={false}
     enableOnAndroid
     {...props}

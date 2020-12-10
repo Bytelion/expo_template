@@ -10,17 +10,16 @@ import Touchable from './Touchable';
 
 const styles = StyleSheet.create({
   button: {
-    borderColor: colors.gray,
-    borderRadius: 50,
-    borderWidth: 0.5,
-    height: 50,
+    borderRadius: 24,
+    height: 40,
     justifyContent: 'center',
     marginVertical: 10,
     paddingHorizontal: 20,
     width: '100%',
   },
   text: {
-    lineHeight: 28,
+    fontSize: 14,
+    lineHeight: 16,
     textAlign: 'center',
   },
 });
@@ -35,12 +34,13 @@ export default ({
   image,
   imageStyle,
   color,
-  title,
+  title = '',
   textStyle,
   textColor,
   disabled,
   pending,
   style,
+  uppercase = true,
   ...props
 }) => (
   <Touchable
@@ -75,7 +75,7 @@ export default ({
             style={[styles.text, textStyle]}
             color={!textColor ? colors.white : textColor}
           >
-            {title}
+            {uppercase ? title.toUpperCase() : title}
           </Text>
         </Fragment>
       )}

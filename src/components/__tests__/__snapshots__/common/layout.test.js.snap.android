@@ -33,15 +33,11 @@ exports[`Button 1`] = `
         "alignItems": "center",
       },
       undefined,
-      Object {
-        "backgroundColor": "#ccc",
-      },
+      undefined,
       Array [
         Object {
-          "borderColor": "#ccc",
-          "borderRadius": 50,
-          "borderWidth": 0.5,
-          "height": 50,
+          "borderRadius": 24,
+          "height": 40,
           "justifyContent": "center",
           "marginVertical": 10,
           "paddingHorizontal": 20,
@@ -94,45 +90,123 @@ exports[`Button 1`] = `
           },
           Array [
             Object {
-              "lineHeight": 28,
+              "fontSize": 14,
+              "lineHeight": 16,
               "textAlign": "center",
             },
             undefined,
           ],
         ]
       }
-    />
+    >
+      
+    </Text>
   </View>
 </View>
 `;
 
-exports[`Icon 1`] = `<Text />`;
+exports[`CheckBox 1`] = `
+<View
+  accessibilityRole="checkbox"
+  accessibilityState={
+    Object {
+      "checked": false,
+    }
+  }
+  accessible={true}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderWidth": 0,
+      "margin": 5,
+      "marginLeft": 0,
+      "marginRight": 10,
+      "opacity": 1,
+      "padding": 0,
+    }
+  }
+  testID="checkbox"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text />
+  </View>
+</View>
+`;
+
+exports[`Icon 1`] = `
+<Text
+  allowFontScaling={false}
+  style={
+    Array [
+      Object {
+        "color": undefined,
+        "fontSize": 12,
+      },
+      Array [
+        Object {
+          "color": undefined,
+        },
+        undefined,
+      ],
+      Object {
+        "fontFamily": "material",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  
+</Text>
+`;
 
 exports[`Input 1`] = `
 <TextInput
   allowFontScaling={true}
   keyboardType="default"
   maxLength={50}
+  placeholder=""
+  placeholderTextColor="#999"
   rejectResponderTermination={true}
   returnKeyType="done"
   style={
     Array [
       Object {
-        "borderColor": "#dfdfdf",
-        "borderWidth": 1,
+        "borderWidth": 0,
       },
       Object {
         "backgroundColor": "#fff",
-        "borderRadius": 22.5,
-        "color": "#000",
-        "fontSize": 16,
-        "height": 45,
-        "marginVertical": 5,
-        "paddingBottom": 2,
+        "borderRadius": 18,
+        "color": undefined,
+        "fontSize": 12,
+        "height": 36,
+        "letterSpacing": 0,
+        "lineHeight": 16,
         "paddingHorizontal": 15,
-        "paddingTop": 4.5,
-        "width": "100%",
+        "paddingVertical": 10,
       },
+      undefined,
+    ]
+  }
+  textStyle={
+    Array [
+      undefined,
       undefined,
     ]
   }
@@ -190,12 +264,12 @@ exports[`ScrollView 1`] = `
   enableOnAndroid={true}
   enableResetScrollToCoords={false}
   extraHeight={75}
-  extraScrollHeight={100}
+  extraScrollHeight={150}
   getScrollResponder={[Function]}
   handleOnScroll={[Function]}
   keyboardDismissMode="interactive"
   keyboardOpeningTime={250}
-  keyboardShouldPersistTaps="always"
+  keyboardShouldPersistTaps="handled"
   keyboardSpace={0}
   onScroll={[Function]}
   resetKeyboardSpace={[Function]}
