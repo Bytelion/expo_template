@@ -42,7 +42,9 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "eslint src/",
+      "pre-push": "yarn jest"
     }
   },
   "lint-staged": {
@@ -50,6 +52,26 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "jest": {
+    "projects": [
+      {
+        "preset": "jest-expo/ios",
+        "transformIgnorePatterns": [
+          "node_modules/(?!static-container)/"
+        ]
+      },
+      {
+        "preset": "jest-expo/android",
+        "transformIgnorePatterns": [
+          "node_modules/(?!static-container)/"
+        ]
+      }
+    ],
+    "testEnvironment": "jsdom",
+    "timers": "fake",
+    "testTimeout": 5000,
+    "verbose": true
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
@@ -69,6 +91,7 @@
     "jest-expo": "^40.0.0",
     "lint-staged": "^8.1.5",
     "prettier": "^1.17.0",
+    "react-native-testing-library": "^6.0.0",
     "react-test-renderer": "16.3.1",
     "reactotron-react-native": "^3.2.1"
   },

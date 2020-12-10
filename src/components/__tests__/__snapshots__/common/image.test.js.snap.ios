@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BackgroundImage 1`] = `
+<View
+  accessibilityIgnoresInvertColors={true}
+  style={
+    Array [
+      Object {
+        "alignSelf": "stretch",
+        "flex": 1,
+        "height": undefined,
+        "width": undefined,
+      },
+      undefined,
+    ]
+  }
+>
+  <Image
+    resizeMode="cover"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "height": undefined,
+          "width": undefined,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Image 1`] = `
+<Image
+  resizeMode="contain"
+  style={
+    Array [
+      undefined,
+      undefined,
+      Object {
+        "height": null,
+      },
+      undefined,
+      undefined,
+    ]
+  }
+/>
+`;
