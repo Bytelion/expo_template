@@ -17,7 +17,7 @@ import styles from './styles';
 const LoginScreen = ({ hasAuth, navigation, username: lastUsername }) => {
   const [username, setUsername] = useState(lastUsername);
   const [password, setPassword] = useState('');
-  const [errorText, setErrorText] = useState('');
+  const [errorText] = useState('');
   const [usernameError, setUsernameError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
 
