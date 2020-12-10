@@ -24,6 +24,7 @@
     "expo-app-loading": "^1.0.0",
     "expo-camera": "~9.1.0",
     "expo-file-system": "~9.3.0",
+    "expo-notifications": "~0.8.2",
     "expo-permissions": "~10.0.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
@@ -43,7 +44,6 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "eslint src/",
       "pre-push": "yarn jest"
     }
   },

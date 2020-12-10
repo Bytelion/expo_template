@@ -44,7 +44,8 @@
         "MANAGE_DOCUMENTS",
         "VIBRATE",
         "WRITE_EXTERNAL_STORAGE"
-      ]
+      ],
+      "useNextNotificationsApi": true
     }
   }
 }

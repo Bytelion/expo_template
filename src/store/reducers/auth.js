@@ -2,6 +2,7 @@ import actionTypes from '../actions/types';
 
 export default (
   state = {
+    hasAuth: false,
     username: false,
     authToken: null,
   },
