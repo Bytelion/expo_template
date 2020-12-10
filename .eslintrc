@@ -28,14 +28,26 @@
     "immutable/no-mutation": 0,
     "react/jsx-indent": 0,
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": 0
+    "react-hooks/exhaustive-deps": 0,
+    "import/no-unresolved": 0,
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
   },
   "globals": {
     "__DEV__": true,
     "navigator": true
   },
   "env": {
-    "react-native/react-native": true
+    "react-native/react-native": true,
+    "jest": true
   },
   "settings": {
     "import/resolver": {

@@ -1,0 +1,286 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  hitSlop={
+    Object {
+      "bottom": 15,
+      "left": 15,
+      "right": 15,
+      "top": 15,
+    }
+  }
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#ccc",
+      "borderColor": "#ccc",
+      "borderRadius": 50,
+      "borderWidth": 0.5,
+      "height": 50,
+      "justifyContent": "center",
+      "marginVertical": 10,
+      "opacity": 1,
+      "paddingHorizontal": 20,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        Object {
+          "flexDirection": "row",
+        },
+        undefined,
+        undefined,
+        undefined,
+        Array [
+          undefined,
+          undefined,
+          Object {
+            "justifyContent": "center",
+          },
+        ],
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#fff",
+          },
+          undefined,
+          undefined,
+          Object {
+            "letterSpacing": 0.35,
+          },
+          Array [
+            Object {
+              "lineHeight": 28,
+              "textAlign": "center",
+            },
+            undefined,
+          ],
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Icon 1`] = `<Text />`;
+
+exports[`Input 1`] = `
+<TextInput
+  allowFontScaling={true}
+  keyboardType="default"
+  maxLength={50}
+  rejectResponderTermination={true}
+  returnKeyType="done"
+  style={
+    Array [
+      Object {
+        "borderColor": "#dfdfdf",
+        "borderWidth": 1,
+      },
+      Object {
+        "backgroundColor": "#fff",
+        "borderRadius": 22.5,
+        "color": "#000",
+        "fontSize": 16,
+        "height": 45,
+        "marginVertical": 5,
+        "paddingBottom": 2,
+        "paddingHorizontal": 15,
+        "paddingTop": 4.5,
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+  underlineColorAndroid="transparent"
+/>
+`;
+
+exports[`Row 1`] = `
+<View
+  style={
+    Array [
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      Object {
+        "flexDirection": "row",
+      },
+      undefined,
+      undefined,
+      undefined,
+      Array [
+        undefined,
+        undefined,
+        undefined,
+      ],
+    ]
+  }
+/>
+`;
+
+exports[`ScrollView 1`] = `
+<RCTScrollView
+  automaticallyAdjustContentInsets={false}
+  contentContainerStyle={
+    Array [
+      undefined,
+      undefined,
+      undefined,
+    ]
+  }
+  contentInset={
+    Object {
+      "bottom": 0,
+    }
+  }
+  enableAutomaticScroll={true}
+  enableOnAndroid={true}
+  enableResetScrollToCoords={false}
+  extraHeight={75}
+  extraScrollHeight={100}
+  getScrollResponder={[Function]}
+  handleOnScroll={[Function]}
+  keyboardDismissMode="interactive"
+  keyboardOpeningTime={250}
+  keyboardShouldPersistTaps="always"
+  keyboardSpace={0}
+  onScroll={[Function]}
+  resetKeyboardSpace={[Function]}
+  scrollEventThrottle={1}
+  scrollForExtraHeightOnAndroid={[Function]}
+  scrollIntoView={[Function]}
+  scrollToEnd={[Function]}
+  scrollToFocusedInput={[Function]}
+  scrollToPosition={[Function]}
+  showsVerticalScrollIndicator={false}
+  style={
+    Array [
+      undefined,
+      undefined,
+      undefined,
+    ]
+  }
+  update={[Function]}
+  viewIsInsideTabBar={false}
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`Text 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": undefined,
+      },
+      undefined,
+      undefined,
+      Object {
+        "letterSpacing": 0.35,
+      },
+      undefined,
+    ]
+  }
+/>
+`;
+
+exports[`Touchable 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  hitSlop={
+    Object {
+      "bottom": 15,
+      "left": 15,
+      "right": 15,
+      "top": 15,
+    }
+  }
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`View 1`] = `
+<View
+  style={
+    Array [
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+    ]
+  }
+/>
+`;
