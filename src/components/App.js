@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StatusBar } from 'react-native';
-import { AppLoading } from 'expo';
+import AppLoading from 'expo-app-loading';
 import { connect } from '@components/common/Helpers';
 import store from '@store';
 import RootNavigator from '@navigation/RootNavigator';
@@ -19,6 +19,9 @@ const App = ({ initialize }) => {
       <AppLoading
         startAsync={initializeAppAsync}
         onFinish={() => setAppReady(true)}
+        onError={() => {
+          // Handle Error Logs Here
+        }}
       />
     );
   }
