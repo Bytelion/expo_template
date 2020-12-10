@@ -1,11 +1,11 @@
 import * as authActions from './auth';
 import * as commonActions from './common';
-import * as productActions from './product';
+import * as notificationActions from './notifications';
 
 const actions = {
   ...authActions,
   ...commonActions,
-  ...productActions,
+  ...notificationActions,
 };
 
 export default actions;
