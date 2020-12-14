@@ -15,16 +15,16 @@ const styles = StyleSheet.create({
     padding: 0,
   },
   disabledBackground: {
-    backgroundColor: colors.grayBackground,
-    flex: 1,
     height: 18,
+    width: 18,
+    position: 'absolute',
+    top: '50%',
     left: '50%',
+    backgroundColor: colors.grays.medium,
+    flex: 1,
     marginLeft: -9,
     marginTop: -9,
     overflow: 'hidden',
-    position: 'absolute',
-    top: '50%',
-    width: 18,
   },
   disabledCheckBox: {
     marginRight: 10,
@@ -34,14 +34,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textStyle: {
-    color: colors.primaryText,
+    color: colors.text.alt,
     fontSize: 14,
     fontWeight: 'normal',
     letterSpacing: 0.2,
     lineHeight: 21,
   },
   title: {
-    color: colors.primaryText,
+    color: colors.text.primary,
     fontSize: 14,
   },
 });
@@ -53,8 +53,8 @@ export default ({ disabled, style, title, ...props }) => {
         <View style={styles.disabledCheckBox}>
           <View style={styles.disabledBackground} />
           <Icon
-            name="check-box-outline-blank"
             color={colors.disabledBorder}
+            name="check-box-outline-blank"
             size={24}
           />
         </View>
@@ -64,13 +64,13 @@ export default ({ disabled, style, title, ...props }) => {
   }
   return (
     <CheckBox
-      title={title}
+      checkedIcon="check-box"
+      checkedColor={colors.white}
       containerStyle={[styles.checkBox, style]}
       iconType="material"
-      checkedIcon="check-box"
-      uncheckedIcon="check-box-outline-blank"
-      checkedColor={colors.white}
       textStyle={styles.textStyle}
+      title={title}
+      uncheckedIcon="check-box-outline-blank"
       {...props}
     />
   );

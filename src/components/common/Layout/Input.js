@@ -28,29 +28,29 @@ const styles = StyleSheet.create({
 class Input extends PureComponent {
   render() {
     const {
-      value,
-      keyboardType,
-      secure,
       error,
       height,
-      returnKeyType,
-      style,
+      keyboardType,
       placeholder = '',
       placeholderUpper = true,
+      returnKeyType,
+      secure,
+      style,
       textStyle,
+      value,
       ...props
     } = this.props;
     return (
       <TextInput
-        value={value}
         keyboardType={keyboardType || 'default'}
-        secureTextEntry={secure}
-        placeholderTextColor={error ? colors.warn : colors.placeholderText}
         maxLength={50}
-        returnKeyType={returnKeyType || 'done'}
-        style={[error ? styles.error : styles.default, styles.input, style]}
         placeholder={placeholderUpper ? placeholder.toUpperCase() : placeholder}
+        placeholderTextColor={error ? colors.warn : colors.text.placeholder}
+        returnKeyType={returnKeyType || 'done'}
+        secureTextEntry={secure}
+        style={[error ? styles.error : styles.default, styles.input, style]}
         textStyle={[styles.text, textStyle]}
+        value={value}
         {...props}
       />
     );

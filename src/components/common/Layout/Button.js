@@ -10,12 +10,12 @@ import Touchable from './Touchable';
 
 const styles = StyleSheet.create({
   button: {
-    borderRadius: 24,
+    width: '100%',
     height: 40,
+    borderRadius: 24,
     justifyContent: 'center',
     marginVertical: 10,
     paddingHorizontal: 20,
-    width: '100%',
   },
   text: {
     fontSize: 14,
@@ -25,34 +25,34 @@ const styles = StyleSheet.create({
 });
 
 export default ({
+  color,
+  disabled,
   flex,
-  justifyContent,
   icon,
+  iconColor,
   iconSize,
   iconStyle,
-  iconColor,
   image,
   imageStyle,
-  color,
+  justifyContent,
+  style,
+  pending,
   title = '',
   textStyle,
   textColor,
-  disabled,
-  pending,
-  style,
   uppercase = true,
   ...props
 }) => (
   <Touchable
+    alignItems={!icon && !image && 'center'}
+    backgroundColor={color || colors.grays.dim}
+    disabled={disabled || pending}
     style={[
       styles.button,
-      flex && { flex },
       disabled && { opacity: 0.5 },
+      flex && { flex },
       style,
     ]}
-    backgroundColor={color || colors.gray}
-    alignItems={!icon && !image && 'center'}
-    disabled={disabled || pending}
     {...props}
   >
     <Row
@@ -64,16 +64,16 @@ export default ({
         <Fragment>
           {icon && (
             <Icon
+              color={iconColor}
               name={icon}
               size={iconSize || 28}
               style={iconStyle}
-              color={iconColor}
             />
           )}
           {image && <Image name={image} size={25} style={imageStyle} />}
           <Text
-            style={[styles.text, textStyle]}
             color={!textColor ? colors.white : textColor}
+            style={[styles.text, textStyle]}
           >
             {uppercase ? title.toUpperCase() : title}
           </Text>

@@ -31,6 +31,7 @@ const LoginScreen = ({ hasAuth, navigation, username: lastUsername }) => {
     if (isEmpty(username) || isEmpty(password)) {
       setUsernameError(isEmpty(username));
       setPasswordError(isEmpty(password));
+
       return;
     }
 
@@ -69,7 +70,7 @@ const LoginScreen = ({ hasAuth, navigation, username: lastUsername }) => {
           <Button
             onPress={handleLogin}
             title="Sign In"
-            color={colors.primary}
+            color={colors.primary.alt}
           />
           <View style={styles.signUp}>
             <Text style={styles.noAccount}>No Account?</Text>

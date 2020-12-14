@@ -3,17 +3,17 @@ import { colors, device } from '@components/common/theme';
 
 export default StyleSheet.create({
   container: {
-    backgroundColor: colors.background,
+    backgroundColor: colors.primary.main,
     flex: 1,
   },
   createOne: {
-    color: colors.secondaryText,
+    color: colors.text.alt,
     fontSize: 14,
     letterSpacing: 0.25,
     lineHeight: 20,
   },
   forgot: {
-    color: colors.primaryText,
+    color: colors.text.main,
     marginBottom: 30,
     marginRight: 10,
     marginTop: 8,
@@ -26,7 +26,7 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
   },
   noAccount: {
-    color: colors.primaryText,
+    color: colors.text.main,
     fontSize: 14,
     letterSpacing: 0.44,
     lineHeight: 28,
@@ -44,7 +44,7 @@ export default StyleSheet.create({
     marginTop: 24,
   },
   statusBar: {
-    backgroundColor: colors.primaryBlue,
+    backgroundColor: colors.primary.main,
     height: device.statusBarHeight,
   },
   subTitle: {

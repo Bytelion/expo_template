@@ -28,7 +28,7 @@ const WelcomeScreen = ({ navigation }) => {
           <Button
             onPress={navigateSignIn}
             title="Sign In"
-            color={colors.primary}
+            color={colors.primary.alt}
           />
           <View style={styles.resendContainer}>
             <Text style={styles.noEmail}>{noEmailText}</Text>

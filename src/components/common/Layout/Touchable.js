@@ -10,25 +10,25 @@ const styles = StyleSheet.create({
 });
 
 export default ({
-  center,
   alignItems,
-  justifyContent,
   backgroundColor,
+  center,
+  justifyContent,
   style,
   ...props
 }) => (
   <Touchable
     hitSlop={{
       top: 15,
-      left: 15,
       right: 15,
       bottom: 15,
+      left: 15,
     }}
     style={[
-      center && styles.center,
       alignItems && { alignItems },
-      justifyContent && { justifyContent },
       backgroundColor && { backgroundColor },
+      center && styles.center,
+      justifyContent && { justifyContent },
       style,
     ]}
     {...props}

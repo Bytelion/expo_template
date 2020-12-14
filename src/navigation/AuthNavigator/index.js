@@ -15,7 +15,7 @@ const AuthNavigator = () => (
       gestureEnabled: false,
       headerBackTitle: null,
       headerStyle: {
-        backgroundColor: colors.background,
+        backgroundColor: colors.primary.main,
         borderBottomWidth: 0,
         shadowRadius: 0,
         shadowOffset: {

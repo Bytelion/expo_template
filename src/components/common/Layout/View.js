@@ -32,35 +32,35 @@ const styles = StyleSheet.create({
 });
 
 export default ({
+  alignItems,
+  center,
+  color,
+  column,
+  debug,
   flex,
   fill,
-  color,
   stretch,
   padding,
-  center,
-  alignItems,
   justifyContent,
   row,
-  column,
   statusBar,
-  debug,
   style,
   ...props
 }) => (
   <View
     style={[
+      alignItems && { alignItems },
+      center && styles.center,
+      color && { backgroundColor: color },
+      column && styles.column,
+      debug && debugView,
       flex && styles.flex,
       fill && styles.fill,
-      color && { backgroundColor: color },
-      stretch && styles.stretch,
-      padding && styles.padding,
-      center && styles.center,
-      alignItems && { alignItems },
       justifyContent && { justifyContent },
+      padding && styles.padding,
       row && styles.row,
-      column && styles.column,
       statusBar && styles.statusBar,
-      debug && debugView,
+      stretch && styles.stretch,
       style,
     ]}
     {...props}
