@@ -43,10 +43,10 @@ exports[`Button 1`] = `
         undefined,
         undefined,
         undefined,
+        undefined,
         Object {
           "flexDirection": "row",
         },
-        undefined,
         undefined,
         undefined,
         Array [
@@ -141,7 +141,7 @@ exports[`Icon 1`] = `
       },
       Array [
         Object {
-          "color": undefined,
+          "color": "#aaa",
         },
         undefined,
       ],
@@ -175,7 +175,7 @@ exports[`Input 1`] = `
       Object {
         "backgroundColor": "#fff",
         "borderRadius": 18,
-        "color": undefined,
+        "color": "#000",
         "fontSize": 12,
         "height": 36,
         "letterSpacing": 0,
@@ -208,10 +208,10 @@ exports[`Row 1`] = `
       undefined,
       undefined,
       undefined,
+      undefined,
       Object {
         "flexDirection": "row",
       },
-      undefined,
       undefined,
       undefined,
       Array [
