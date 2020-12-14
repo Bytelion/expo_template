@@ -1,4 +1,4 @@
-import { AsyncStorage } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { isEmpty } from 'lodash';
 import { authService } from '@services';
 import actionTypes from './types';
