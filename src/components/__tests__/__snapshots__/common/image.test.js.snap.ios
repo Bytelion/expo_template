@@ -43,10 +43,10 @@ exports[`Image 1`] = `
   style={
     Array [
       undefined,
-      undefined,
       Object {
         "height": null,
       },
+      undefined,
       undefined,
       undefined,
     ]

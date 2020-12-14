@@ -24,18 +24,18 @@ const Image = ({
   };
   return (
     <RNImage
-      source={name ? getImage(name) : source}
       resizeMode={resizeMode || 'contain'}
+      source={name ? getImage(name) : source}
       style={[
-        center && {
-          alignSelf: 'center',
-        },
         size && {
           width: size,
           height: size,
         },
         !size && { height: returnHeight() },
         maxWidth && { width: '100%' },
+        center && {
+          alignSelf: 'center',
+        },
         style,
       ]}
       {...props}
@@ -45,6 +45,8 @@ const Image = ({
 
 const BackgroundImage = ({ name, source, style, resizeMode, ...props }) => (
   <ImageBackground
+    resizeMode={resizeMode || 'cover'}
+    source={name ? getImage(name) : source}
     style={[
       {
         flex: 1,
@@ -54,8 +56,6 @@ const BackgroundImage = ({ name, source, style, resizeMode, ...props }) => (
       },
       style,
     ]}
-    source={name ? getImage(name) : source}
-    resizeMode={resizeMode || 'cover'}
     {...props}
   />
 );

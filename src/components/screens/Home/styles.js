@@ -3,7 +3,7 @@ import { colors } from '@components/common/theme';
 
 export default StyleSheet.create({
   container: {
-    backgroundColor: colors.background,
+    backgroundColor: colors.primary.main,
     flex: 1,
   },
 });

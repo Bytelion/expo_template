@@ -8,8 +8,8 @@ const aspectRatio = width / height;
 const device = {
   width,
   height,
-  statusBarHeight,
   aspectRatio,
+  statusBarHeight,
 };
 
 const debug = {
@@ -17,25 +17,8 @@ const debug = {
   borderColor: 'red',
 };
 
-const variables = {
-  fontSize: 16,
-};
-
-const colors = {
-  // App
-  primary: '#00796b',
-  background: '#777777',
-  primaryText: '#b3ffffff',
-  secondaryText: '#fff',
-  placeholderText: '#999',
-  // General
-  white: '#fff',
-  warn: '#ff0000',
-  transparent: 'transparent',
-};
-
 const boxShadow = {
-  shadowColor: colors.darkGray,
+  shadowColor: '#888',
   shadowOffset: {
     width: 0,
     height: 2,
@@ -44,4 +27,69 @@ const boxShadow = {
   shadowRadius: 2,
 };
 
-export { device, debug, variables, colors, boxShadow };
+const colors = {
+  primary: {
+    main: '#329A9A',
+    alt: '#74D7D7',
+  },
+  secondary: {
+    main: '',
+    alt: '',
+  },
+  grays: {
+    dark: '#888',
+    medium: '#aaa',
+    bright: '#eee',
+  },
+  shades: {
+    light: 'rgba(255, 255, 255, .7)',
+    dark: 'rgba(0, 0, 0, .7)',
+  },
+  text: {
+    main: '#b3ffffff',
+    alt: '#fff',
+    placeholder: '#999',
+  },
+  // General
+  black: '#000',
+  white: '#fff',
+  warn: '#ff0000',
+  transparent: 'transparent',
+};
+
+const typography = {
+  fontFamily: 'Roboto',
+  h1: {
+    fontSize: 40,
+    fontWeight: '700',
+  },
+  h2: {
+    fontSize: 34,
+  },
+  h3: {
+    fontSize: 28,
+  },
+  h4: {
+    fontSize: 22,
+  },
+  h5: {
+    fontSize: 18,
+  },
+  h6: {
+    fontSize: 16,
+    textTransform: 'uppercase',
+  },
+  subtitle1: {},
+  subtitle2: {},
+  body1: {
+    fontSize: 16,
+    lineHeight: 24,
+  },
+  body2: {
+    fontSize: 14,
+    lineHeight: 22,
+  },
+  caption: {},
+};
+
+export { device, debug, colors, boxShadow, typography };

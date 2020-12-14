@@ -3,11 +3,11 @@ import { colors, device } from '@components/common/theme';
 
 export default StyleSheet.create({
   container: {
-    backgroundColor: colors.background,
+    backgroundColor: colors.primary.main,
     flex: 1,
   },
   infoText: {
-    color: colors.primaryText,
+    color: colors.text.main,
     fontSize: 14,
     letterSpacing: 0,
     lineHeight: 21,
@@ -20,13 +20,13 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
   },
   noEmail: {
-    color: colors.primaryText,
+    color: colors.text.main,
     fontSize: 14,
     letterSpacing: 0.44,
     lineHeight: 28,
   },
   resend: {
-    color: colors.secondaryText,
+    color: colors.text.alt,
     fontSize: 14,
     letterSpacing: 0.25,
     lineHeight: 20,

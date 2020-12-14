@@ -107,7 +107,7 @@ const SignUpScreen = ({ navigation }) => {
           <Button
             onPress={handleLogin}
             title="Sign Up"
-            color={colors.primary}
+            color={colors.primary.alt}
           />
         </View>
       </ScrollView>

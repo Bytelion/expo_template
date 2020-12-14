@@ -6,11 +6,11 @@ export default StyleSheet.create({
     marginBottom: 25,
   },
   container: {
-    backgroundColor: colors.background,
+    backgroundColor: colors.primary.main,
     flex: 1,
   },
   infoText: {
-    color: colors.primaryText,
+    color: colors.text.main,
     fontSize: 12,
     letterSpacing: 0.17,
     lineHeight: 21,
