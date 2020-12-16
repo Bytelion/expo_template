@@ -19,21 +19,23 @@ const WelcomeScreen = ({ navigation }) => {
   const noEmailText = "Didn't recieve an email?";
 
   return (
-    <View style={styles.container}>
+    <View style={styles.mainView}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <View style={styles.scrollContainer}>
+        <View style={styles.scrollViewInner}>
           <Text style={styles.title}>Welcome!</Text>
           <Text style={styles.subTitle}>{subTitle}</Text>
           <Text style={styles.infoText}>{welcomeDisclaimer}</Text>
-          <Button
-            onPress={navigateSignIn}
-            title="Sign In"
-            color={colors.primary.alt}
-          />
-          <View style={styles.resendContainer}>
-            <Text style={styles.noEmail}>{noEmailText}</Text>
+          <View center style={styles.actionView}>
+            <Button
+              onPress={navigateSignIn}
+              title="Sign In"
+              color={colors.primary.alt}
+            />
+          </View>
+          <View center>
+            <Text style={styles.label}>{noEmailText}</Text>
             <Touchable>
-              <Text style={styles.resend}>Resend email</Text>
+              <Text style={styles.action}>Resend email</Text>
             </Touchable>
           </View>
         </View>
@@ -42,7 +44,7 @@ const WelcomeScreen = ({ navigation }) => {
   );
 };
 
-export default connect(state => ({
+export default connect((state) => ({
   hasAuth: state.auth.hasAuth,
   alert: state.common.alert,
   username: state.auth.username,

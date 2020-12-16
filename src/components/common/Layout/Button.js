@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { StyleSheet } from 'react-native';
 import ActivityIndicator from '../ActivityIndicator';
 import { colors } from '../theme';
@@ -61,7 +61,7 @@ export default ({
       {pending ? (
         <ActivityIndicator color={colors.white} size="small" />
       ) : (
-        <Fragment>
+        <>
           {icon && (
             <Icon
               color={iconColor}
@@ -77,7 +77,7 @@ export default ({
           >
             {uppercase ? title.toUpperCase() : title}
           </Text>
-        </Fragment>
+        </>
       )}
     </Row>
   </Touchable>

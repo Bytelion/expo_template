@@ -10,6 +10,10 @@ const styles = StyleSheet.create({
   column: {
     flexDirection: 'column',
   },
+  end: {
+    alignItems: 'flex-end',
+    justifyContent: 'flex-end',
+  },
   fill: {
     backgroundColor: colors.white,
   },
@@ -37,6 +41,7 @@ export default ({
   color,
   column,
   debug,
+  end,
   flex,
   fill,
   stretch,
@@ -54,6 +59,7 @@ export default ({
       color && { backgroundColor: color },
       column && styles.column,
       debug && debugView,
+      end && styles.end,
       flex && styles.flex,
       fill && styles.fill,
       justifyContent && { justifyContent },

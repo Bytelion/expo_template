@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { CheckBox } from 'react-native-elements';
-import { colors } from '../theme';
+import { colors, typography } from '../theme';
 import Icon from './Icon';
 import Row from './Row';
 import Text from './Text';
@@ -34,19 +34,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textStyle: {
+    ...typography.caption,
     color: colors.text.alt,
-    fontSize: 14,
-    fontWeight: 'normal',
-    letterSpacing: 0.2,
-    lineHeight: 21,
+    fontWeight: '400',
   },
   title: {
-    color: colors.text.primary,
-    fontSize: 14,
+    ...typography.caption,
   },
 });
 
-export default ({ disabled, style, title, ...props }) => {
+export default ({ color, disabled, style, title, ...props }) => {
   if (disabled) {
     return (
       <Row style={styles.disabledContainer}>
@@ -58,7 +55,7 @@ export default ({ disabled, style, title, ...props }) => {
             size={24}
           />
         </View>
-        <Text style={styles.title}>{title}</Text>
+        <Text style={[styles.title]}>{title}</Text>
       </Row>
     );
   }
@@ -68,7 +65,12 @@ export default ({ disabled, style, title, ...props }) => {
       checkedColor={colors.white}
       containerStyle={[styles.checkBox, style]}
       iconType="material"
-      textStyle={styles.textStyle}
+      textStyle={[
+        styles.textStyle,
+        {
+          color,
+        },
+      ]}
       title={title}
       uncheckedIcon="check-box-outline-blank"
       {...props}
