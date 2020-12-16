@@ -41,41 +41,47 @@ const LoginScreen = ({ hasAuth, navigation, username: lastUsername }) => {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={styles.mainView}>
       <View style={styles.statusBar} />
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <View style={styles.scrollContainer}>
-          <Text style={styles.title}>{Constants.manifest.name}</Text>
-          <Text style={styles.subTitle}>Sign In</Text>
-          <View style={styles.inputContainer}>
+        <View style={styles.scrollViewInner}>
+          <View style={styles.header}>
+            <Text style={styles.title}>{Constants.manifest.name}</Text>
+            <Text style={styles.subTitle}>Sign In</Text>
+          </View>
+          <View style={styles.inputs}>
             <Input
-              placeholder="Username"
-              onChangeText={text => setUsername(text)}
-              value={username}
               error={usernameError}
+              onChangeText={(text) => setUsername(text)}
+              placeholder="Username"
+              style={styles.input}
+              value={username}
             />
             <Input
-              placeholder="Password"
-              onChangeText={text => setPassword(text)}
-              value={password}
               error={passwordError}
+              onChangeText={(text) => setPassword(text)}
+              placeholder="Password"
+              value={password}
+              style={styles.input}
               secure
             />
           </View>
-          <View style={styles.forgotContainer}>
+          <View end style={styles.actionView}>
             <Touchable>
-              <Text style={styles.forgot}>Forgot Password?</Text>
+              <Text style={styles.action}>Forgot Password?</Text>
             </Touchable>
           </View>
-          <Button
-            onPress={handleLogin}
-            title="Sign In"
-            color={colors.primary.alt}
-          />
-          <View style={styles.signUp}>
-            <Text style={styles.noAccount}>No Account?</Text>
+          <View style={styles.actionView}>
+            <Button
+              color={colors.primary.alt}
+              onPress={handleLogin}
+              title="Sign In"
+            />
+          </View>
+          <View center>
+            <Text style={styles.label}>No Account?</Text>
             <Touchable onPress={navigateSignUp}>
-              <Text style={styles.createOne}>Create one here!</Text>
+              <Text style={styles.action}>Create one here!</Text>
             </Touchable>
           </View>
         </View>
@@ -84,7 +90,7 @@ const LoginScreen = ({ hasAuth, navigation, username: lastUsername }) => {
   );
 };
 
-export default connect(state => ({
+export default connect((state) => ({
   hasAuth: state.auth.hasAuth,
   alert: state.common.alert,
   username: state.auth.username,

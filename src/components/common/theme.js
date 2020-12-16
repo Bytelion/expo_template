@@ -42,41 +42,46 @@ const colors = {
     bright: '#eee',
   },
   shades: {
-    light: 'rgba(255, 255, 255, .7)',
-    dark: 'rgba(0, 0, 0, .7)',
+    white: 'rgba(255, 255, 255, .65)',
+    black: 'rgba(0, 0, 0, .65)',
   },
   text: {
-    main: '#b3ffffff',
-    alt: '#fff',
+    main: '#363636',
+    alt: '#B3B3B3',
     placeholder: '#999',
   },
   // General
   black: '#000',
   white: '#fff',
-  warn: '#ff0000',
+  warn: '#B94B42',
   transparent: 'transparent',
 };
 
 const typography = {
   fontFamily: 'Roboto',
   h1: {
-    fontSize: 40,
+    fontSize: 34,
     fontWeight: '700',
   },
   h2: {
-    fontSize: 34,
+    fontSize: 30,
+    fontWeight: '700',
   },
   h3: {
-    fontSize: 28,
+    fontSize: 26,
+    fontWeight: '400',
   },
   h4: {
     fontSize: 22,
+    fontWeight: '400',
   },
   h5: {
     fontSize: 18,
+    fontWeight: '400',
   },
   h6: {
     fontSize: 16,
+    fontWeight: '400',
     textTransform: 'uppercase',
   },
   subtitle1: {},
@@ -89,7 +94,10 @@ const typography = {
     fontSize: 14,
     lineHeight: 22,
   },
-  caption: {},
+  caption: {
+    fontSize: 12,
+    lineHeight: 20,
+  },
 };
 
 export { device, debug, colors, boxShadow, typography };

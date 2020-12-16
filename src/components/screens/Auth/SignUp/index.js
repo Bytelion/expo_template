@@ -48,6 +48,7 @@ const SignUpScreen = ({ navigation }) => {
       setPhoneError(isEmpty(phone));
       setPasswordError(isEmpty(password));
       setPasswordConfirmError(isEmpty(passwordConfirm));
+
       return;
     }
 
@@ -55,13 +56,12 @@ const SignUpScreen = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={styles.mainView}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <View style={styles.scrollContainer}>
-          <Text style={styles.subTitle}>Sign Up</Text>
+        <View style={styles.scrollViewInner}>
           <Input
             placeholder="Email"
-            onChangeText={text => setEmail(text)}
+            onChangeText={(text) => setEmail(text)}
             value={email}
             style={styles.input}
             error={emailError}
@@ -69,21 +69,21 @@ const SignUpScreen = ({ navigation }) => {
           <Text style={styles.infoText}>{emailDisclaimer}</Text>
           <Input
             placeholder="Username"
-            onChangeText={text => setUsername(text)}
+            onChangeText={(text) => setUsername(text)}
             value={username}
             style={styles.input}
             error={usernameError}
           />
           <Input
             placeholder="Mobile Phone"
-            onChangeText={text => setPhone(text)}
+            onChangeText={(text) => setPhone(text)}
             value={phone}
             style={styles.input}
             error={phoneError}
           />
           <Input
             placeholder="Password"
-            onChangeText={text => setPassword(text)}
+            onChangeText={(text) => setPassword(text)}
             value={password}
             style={styles.input}
             error={passwordError}
@@ -91,7 +91,7 @@ const SignUpScreen = ({ navigation }) => {
           />
           <Input
             placeholder="Re-enter Password"
-            onChangeText={text => setPasswordConfirm(text)}
+            onChangeText={(text) => setPasswordConfirm(text)}
             value={passwordConfirm}
             style={styles.input}
             error={passwordConfirmError}
@@ -99,10 +99,11 @@ const SignUpScreen = ({ navigation }) => {
           />
           <Text style={styles.infoText}>{passwordDisclaimer}</Text>
           <CheckBox
-            title={checkTitle}
-            style={styles.checkStyle}
+            color={colors.white}
             checked={termsChecked}
             onPress={() => setTermsChecked(!termsChecked)}
+            style={styles.checkStyle}
+            title={checkTitle}
           />
           <Button
             onPress={handleLogin}

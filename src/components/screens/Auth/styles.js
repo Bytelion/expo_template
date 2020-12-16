@@ -1,64 +1,45 @@
 import { StyleSheet } from 'react-native';
-import { colors, device } from '@components/common/theme';
+import { colors, device, typography } from '@components/common/theme';
 
 export default StyleSheet.create({
-  container: {
+  mainView: {
     backgroundColor: colors.primary.main,
     flex: 1,
   },
-  createOne: {
-    color: colors.text.alt,
-    fontSize: 14,
-    letterSpacing: 0.25,
-    lineHeight: 20,
-  },
-  forgot: {
-    color: colors.text.main,
-    marginBottom: 30,
-    marginRight: 10,
-    marginTop: 8,
-  },
-  forgotContainer: {
-    alignItems: 'flex-end',
-  },
-  inputContainer: {
-    height: 95,
-    justifyContent: 'space-between',
-  },
-  noAccount: {
-    color: colors.text.main,
-    fontSize: 14,
-    letterSpacing: 0.44,
-    lineHeight: 28,
-  },
-  scrollContainer: {
-    height: device.height,
-    justifyContent: 'center',
-    marginHorizontal: 64,
+  statusBar: {
+    height: device.statusBarHeight,
+    backgroundColor: colors.primary.main,
   },
   scrollView: {
     justifyContent: 'center',
   },
-  signUp: {
-    alignItems: 'center',
-    marginTop: 24,
-  },
-  statusBar: {
-    backgroundColor: colors.primary.main,
-    height: device.statusBarHeight,
-  },
-  subTitle: {
-    color: colors.white,
-    fontSize: 18,
-    letterSpacing: 0.21,
-    marginBottom: 15,
-    textAlign: 'center',
+  scrollViewInner: {
+    height: device.height,
+    justifyContent: 'center',
+    marginHorizontal: 60,
   },
   title: {
+    ...typography.h1,
     color: colors.white,
-    fontSize: 36.4,
-    letterSpacing: 0.25,
     marginBottom: 60,
     textAlign: 'center',
+  },
+  subTitle: {
+    ...typography.h4,
+    color: colors.white,
+    marginBottom: 10,
+    textAlign: 'center',
+  },
+  input: {
+    marginBottom: 10,
+  },
+  actionView: {
+    marginBottom: 30,
+  },
+  action: {
+    color: colors.white,
+  },
+  label: {
+    color: colors.shades.white,
   },
 });

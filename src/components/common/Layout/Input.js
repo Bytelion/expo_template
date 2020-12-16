@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { StyleSheet, TextInput } from 'react-native';
-import { colors } from '../theme';
+import { colors, typography } from '../theme';
 
 const styles = StyleSheet.create({
   default: {
@@ -11,14 +11,12 @@ const styles = StyleSheet.create({
     borderWidth: 2,
   },
   input: {
+    ...typography.caption,
+    height: 40,
     backgroundColor: colors.white,
-    borderRadius: 18,
+    borderRadius: 20,
     color: colors.black,
-    fontSize: 12,
-    height: 36,
-    letterSpacing: 0,
-    lineHeight: 16,
-    paddingHorizontal: 15,
+    paddingHorizontal: 20,
     paddingVertical: 10,
   },
 });
