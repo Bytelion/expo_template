@@ -21,7 +21,7 @@ jobs:
           key: v1-cache-dependencies-{{ checksum "yarn.lock" }}-{{ checksum "package.json" }}-{{ arch }}
       - run:
           name: Run tests
-          command: npx jest --ci --passWithNoTests --silent
+          command: npx jest --ci --passWithNoTests --silent --u
       - run:
           name: Run linting
           command: yarn run lint
