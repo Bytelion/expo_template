@@ -10,7 +10,7 @@ import {
   Text,
   Touchable,
   View,
-} from '../../common/Layout';
+} from '@common/Layout';
 
 afterEach(cleanup);
 
