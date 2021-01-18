@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, waitFor, cleanup } from 'react-native-testing-library';
-import ActivityIndicator from '../../common/ActivityIndicator';
+import ActivityIndicator from '@common/ActivityIndicator';
 
 afterEach(cleanup);
 

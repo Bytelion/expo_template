@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Constants from 'expo-constants';
-import { isEmpty } from 'lodash';
+import { useForm } from 'react-hook-form';
+import Field from '@common/Forms/Field';
 import { connect } from '@components/common/Helpers';
 import { colors } from '@components/common/theme';
 import {
   Button,
-  Input,
   ScrollView,
   View,
   Text,
@@ -13,11 +13,8 @@ import {
 } from '@components/common/Layout';
 import styles from './styles';
 
-const LoginScreen = ({ hasAuth, navigation, username: lastUsername }) => {
-  const [username, setUsername] = useState(lastUsername);
-  const [password, setPassword] = useState('');
-  const [usernameError, setUsernameError] = useState(false);
-  const [passwordError, setPasswordError] = useState(false);
+const LoginScreen = ({ hasAuth, navigation }) => {
+  const form = useForm();
 
   const navigateHome = () => navigation.navigate('Home');
   const navigateSignUp = () => navigation.navigate('SignUp');
@@ -27,14 +24,7 @@ const LoginScreen = ({ hasAuth, navigation, username: lastUsername }) => {
     navigateHome();
   }
 
-  const handleLogin = async () => {
-    if (isEmpty(username) || isEmpty(password)) {
-      setUsernameError(isEmpty(username));
-      setPasswordError(isEmpty(password));
-
-      return;
-    }
-
+  const onSubmit = async (data) => {
     // For test purposes allowing nav without authToken
     // REMOVE IN PROJECT
     navigateHome();
@@ -50,20 +40,28 @@ const LoginScreen = ({ hasAuth, navigation, username: lastUsername }) => {
             <Text style={styles.subTitle}>Sign In</Text>
           </View>
           <View style={styles.inputs}>
-            <Input
-              error={usernameError}
-              onChangeText={(text) => setUsername(text)}
+            <Field
+              form={form}
+              name="username"
               placeholder="Username"
-              style={styles.input}
-              value={username}
+              rules={{
+                required: {
+                  value: true,
+                  message: 'Username is required.',
+                },
+              }}
             />
-            <Input
-              error={passwordError}
-              onChangeText={(text) => setPassword(text)}
+            <Field
+              form={form}
+              name="password"
               placeholder="Password"
-              value={password}
-              style={styles.input}
               secure
+              rules={{
+                required: {
+                  value: true,
+                  message: 'Password is required.',
+                },
+              }}
             />
           </View>
           <View end style={styles.actionView}>
@@ -74,7 +72,7 @@ const LoginScreen = ({ hasAuth, navigation, username: lastUsername }) => {
           <View style={styles.actionView}>
             <Button
               color={colors.primary.alt}
-              onPress={handleLogin}
+              onPress={form.handleSubmit(onSubmit)}
               title="Sign In"
             />
           </View>

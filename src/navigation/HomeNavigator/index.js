@@ -2,12 +2,12 @@ import React from 'react';
 import { Alert } from 'react-native';
 import Constants from 'expo-constants';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from '@components/screens/Home';
+import HomeScreen from '@screens/Home';
 import { colors, device } from '@components/common/theme';
 import { Icon, Touchable } from '@components/common/Layout';
 import { removeAuth } from '@store/actions/auth';
 
-const logout = navigation => {
+const logout = (navigation) => {
   Alert.alert('Logout', `Are you sure you would like to logout?`, [
     { text: 'No', style: 'cancel' },
     {

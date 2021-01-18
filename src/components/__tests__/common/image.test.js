@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, waitFor, cleanup } from 'react-native-testing-library';
-import { Image, BackgroundImage } from '../../common/Image';
+import { Image, BackgroundImage } from '@common/Image';
 
 afterEach(cleanup);
 
