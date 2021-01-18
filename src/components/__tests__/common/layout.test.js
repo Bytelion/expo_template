@@ -4,7 +4,6 @@ import {
   Button,
   CheckBox,
   Icon,
-  Input,
   Row,
   ScrollView,
   Text,
@@ -33,13 +32,6 @@ test('Icon', async () => {
   await waitFor(() => icon);
   expect(icon).toBeTruthy();
   expect(icon.toJSON()).toMatchSnapshot();
-});
-
-test('Input', async () => {
-  const input = await render(<Input />);
-  await waitFor(() => input);
-  expect(input).toBeTruthy();
-  expect(input.toJSON()).toMatchSnapshot();
 });
 
 test('Row', async () => {
