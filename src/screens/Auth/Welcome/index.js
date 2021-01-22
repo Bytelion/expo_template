@@ -8,10 +8,12 @@ import {
   Text,
   Touchable,
 } from '@components/common/Layout';
-import styles from './styles';
+import styles from '../styles';
 
 const WelcomeScreen = ({ navigation }) => {
   const navigateSignIn = () => navigation.navigate('SignIn');
+
+  const handleResendEmail = () => {};
 
   const subTitle = "We're glad you're here.";
   const welcomeDisclaimer =
@@ -22,10 +24,20 @@ const WelcomeScreen = ({ navigation }) => {
     <View style={styles.mainView}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.scrollViewInner}>
-          <Text style={styles.title}>Welcome!</Text>
-          <Text style={styles.subTitle}>{subTitle}</Text>
-          <Text style={styles.infoText}>{welcomeDisclaimer}</Text>
-          <View center style={styles.actionView}>
+          <View center mb={2}>
+            <Text color="white" variant="h1">
+              Welcome!
+            </Text>
+            <Text color="white" variant="h5">
+              {subTitle}
+            </Text>
+          </View>
+          <View center mb={4}>
+            <Text center color="white" variant="body2">
+              {welcomeDisclaimer}
+            </Text>
+          </View>
+          <View mb={4}>
             <Button
               onPress={navigateSignIn}
               title="Sign In"
@@ -33,9 +45,9 @@ const WelcomeScreen = ({ navigation }) => {
             />
           </View>
           <View center>
-            <Text style={styles.label}>{noEmailText}</Text>
-            <Touchable>
-              <Text style={styles.action}>Resend email</Text>
+            <Text color="whiteFade">{noEmailText}</Text>
+            <Touchable onPress={handleResendEmail}>
+              <Text color="white">Resend email</Text>
             </Touchable>
           </View>
         </View>

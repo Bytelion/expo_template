@@ -8,12 +8,11 @@ export default ({
   debug,
   flex,
   stretch,
-  style,
   showsVerticalScrollIndicator,
+  style,
   ...props
 }) => (
   <KeyboardAwareScrollView
-    style={[flex && { flex: 1 }, stretch && { alignSelf: 'stretch' }, style]}
     contentContainerStyle={[
       center && {
         alignItems: 'center',
@@ -28,6 +27,7 @@ export default ({
     enableOnAndroid
     keyboardShouldPersistTaps="handled"
     showsVerticalScrollIndicator={showsVerticalScrollIndicator || false}
+    style={[flex && { flex: 1 }, stretch && { alignSelf: 'stretch' }, style]}
     {...props}
   />
 );

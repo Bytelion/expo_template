@@ -59,6 +59,7 @@ export default ({ color, disabled, style, title, ...props }) => {
       </Row>
     );
   }
+
   return (
     <CheckBox
       checkedIcon="check-box"

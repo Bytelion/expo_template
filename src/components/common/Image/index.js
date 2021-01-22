@@ -27,15 +27,15 @@ const Image = ({
       resizeMode={resizeMode || 'contain'}
       source={name ? getImage(name) : source}
       style={[
+        center && {
+          alignSelf: 'center',
+        },
+        maxWidth && { width: '100%' },
         size && {
           width: size,
           height: size,
         },
         !size && { height: returnHeight() },
-        maxWidth && { width: '100%' },
-        center && {
-          alignSelf: 'center',
-        },
         style,
       ]}
       {...props}

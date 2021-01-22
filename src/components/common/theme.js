@@ -5,18 +5,6 @@ const { width, height } = Dimensions.get('window');
 const { statusBarHeight } = Constants;
 const aspectRatio = width / height;
 
-const device = {
-  width,
-  height,
-  aspectRatio,
-  statusBarHeight,
-};
-
-const debug = {
-  borderWidth: 1,
-  borderColor: 'red',
-};
-
 const boxShadow = {
   shadowColor: '#888',
   shadowOffset: {
@@ -41,10 +29,6 @@ const colors = {
     medium: '#aaa',
     bright: '#eee',
   },
-  shades: {
-    white: 'rgba(255, 255, 255, .65)',
-    black: 'rgba(0, 0, 0, .65)',
-  },
   text: {
     main: '#363636',
     alt: '#B3B3B3',
@@ -52,10 +36,26 @@ const colors = {
   },
   // General
   black: '#000',
+  blackFade: 'rgba(0, 0, 0, .65)',
   white: '#fff',
+  whiteFade: 'rgba(255, 255, 255, .65)',
   warn: '#B94B42',
   transparent: 'transparent',
 };
+
+const device = {
+  width,
+  height,
+  aspectRatio,
+  statusBarHeight,
+};
+
+const debug = {
+  borderWidth: 1,
+  borderColor: 'red',
+};
+
+const spacing = 8;
 
 const typography = {
   fontFamily: 'Roboto',
@@ -100,4 +100,4 @@ const typography = {
   },
 };
 
-export { device, debug, colors, boxShadow, typography };
+export { boxShadow, colors, device, debug, spacing, typography };

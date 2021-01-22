@@ -17,6 +17,7 @@ const LoginScreen = ({ hasAuth, navigation }) => {
   const form = useForm();
 
   const navigateHome = () => navigation.navigate('Home');
+  const navigateForgotPassword = () => {};
   const navigateSignUp = () => navigation.navigate('SignUp');
 
   // Navigate to home screen if the authToken already exists
@@ -24,7 +25,7 @@ const LoginScreen = ({ hasAuth, navigation }) => {
     navigateHome();
   }
 
-  const onSubmit = async (data) => {
+  const onSubmit = async () => {
     // For test purposes allowing nav without authToken
     // REMOVE IN PROJECT
     navigateHome();
@@ -32,44 +33,56 @@ const LoginScreen = ({ hasAuth, navigation }) => {
 
   return (
     <View style={styles.mainView}>
-      <View style={styles.statusBar} />
+      <View statusBar />
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.scrollViewInner}>
-          <View style={styles.header}>
-            <Text style={styles.title}>{Constants.manifest.name}</Text>
-            <Text style={styles.subTitle}>Sign In</Text>
+          <View style={styles.header} mb={1}>
+            <View center mb={4}>
+              <Text color="white" variant="h1">
+                {Constants.manifest.name}
+              </Text>
+            </View>
+            <View center>
+              <Text color="white" variant="h4">
+                Sign In
+              </Text>
+            </View>
           </View>
           <View style={styles.inputs}>
-            <Field
-              form={form}
-              name="username"
-              placeholder="Username"
-              rules={{
-                required: {
-                  value: true,
-                  message: 'Username is required.',
-                },
-              }}
-            />
-            <Field
-              form={form}
-              name="password"
-              placeholder="Password"
-              secure
-              rules={{
-                required: {
-                  value: true,
-                  message: 'Password is required.',
-                },
-              }}
-            />
+            <View mb={1}>
+              <Field
+                form={form}
+                name="username"
+                placeholder="Username"
+                rules={{
+                  required: {
+                    value: true,
+                    message: 'Username is required.',
+                  },
+                }}
+              />
+            </View>
+            <View mb={1}>
+              <Field
+                form={form}
+                name="password"
+                placeholder="Password"
+                secure
+                rules={{
+                  required: {
+                    value: true,
+                    message: 'Password is required.',
+                  },
+                }}
+              />
+            </View>
           </View>
-          <View end style={styles.actionView}>
-            <Touchable>
-              <Text style={styles.action}>Forgot Password?</Text>
+          <View end mb={3}>
+            <Touchable onPress={navigateForgotPassword}>
+              <Text color="white">Forgot Password?</Text>
             </Touchable>
           </View>
-          <View style={styles.actionView}>
+          <View mb={3}>
             <Button
               color={colors.primary.alt}
               onPress={form.handleSubmit(onSubmit)}
@@ -77,9 +90,9 @@ const LoginScreen = ({ hasAuth, navigation }) => {
             />
           </View>
           <View center>
-            <Text style={styles.label}>No Account?</Text>
+            <Text color="whiteFade">No Account?</Text>
             <Touchable onPress={navigateSignUp}>
-              <Text style={styles.action}>Create one here!</Text>
+              <Text color="white">Create one here!</Text>
             </Touchable>
           </View>
         </View>

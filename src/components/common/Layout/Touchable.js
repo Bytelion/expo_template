@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import Touchable from 'react-native-platform-touchable';
+import { StyleSheet, View } from 'react-native';
+import { RectButton } from 'react-native-gesture-handler';
 
 const styles = StyleSheet.create({
   center: {
@@ -10,20 +10,16 @@ const styles = StyleSheet.create({
 });
 
 export default ({
+  accessible,
   alignItems,
   backgroundColor,
   center,
+  children,
   justifyContent,
   style,
   ...props
 }) => (
-  <Touchable
-    hitSlop={{
-      top: 15,
-      right: 15,
-      bottom: 15,
-      left: 15,
-    }}
+  <RectButton
     style={[
       alignItems && { alignItems },
       backgroundColor && { backgroundColor },
@@ -32,5 +28,7 @@ export default ({
       style,
     ]}
     {...props}
-  />
+  >
+    <View accessible>{children}</View>
+  </RectButton>
 );
