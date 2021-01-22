@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
 });
 
 export default ({
+  accessible,
   alignItems,
   backgroundColor,
   center,
