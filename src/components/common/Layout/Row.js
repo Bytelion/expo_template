@@ -4,12 +4,12 @@ import { colors } from '../theme';
 import View from './View';
 
 const styles = StyleSheet.create({
-  dividerBottom: {
-    borderBottomWidth: 1,
-  },
   dividerTop: {
     borderColor: colors.white,
     borderTopWidth: 1,
+  },
+  dividerBottom: {
+    borderBottomWidth: 1,
   },
 });
 

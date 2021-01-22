@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { colors, device, debug as debugView } from '../theme';
+import { device, debug as debugStyles, spacing } from '../theme';
 
 const styles = StyleSheet.create({
   center: {
@@ -14,21 +14,14 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
     justifyContent: 'flex-end',
   },
-  fill: {
-    backgroundColor: colors.white,
-  },
   flex: {
     flex: 1,
-  },
-  padding: {
-    paddingHorizontal: 10,
-    paddingVertical: '2.5%',
   },
   row: {
     flexDirection: 'row',
   },
   statusBar: {
-    paddingTop: device.statusBarHeight,
+    height: device.statusBarHeight,
   },
   stretch: {
     alignSelf: 'stretch',
@@ -37,33 +30,69 @@ const styles = StyleSheet.create({
 
 export default ({
   alignItems,
+  background,
   center,
-  color,
   column,
   debug,
   end,
   flex,
-  fill,
-  stretch,
-  padding,
   justifyContent,
+  m,
+  mt,
+  mr,
+  mb,
+  ml,
+  mx,
+  my,
+  p,
+  pt,
+  pr,
+  pb,
+  pl,
+  px,
+  py,
   row,
   statusBar,
+  stretch,
   style,
   ...props
 }) => (
   <View
     style={[
       alignItems && { alignItems },
+      background && { backgroundColor: background },
       center && styles.center,
-      color && { backgroundColor: color },
       column && styles.column,
-      debug && debugView,
+      debug && debugStyles,
       end && styles.end,
       flex && styles.flex,
-      fill && styles.fill,
       justifyContent && { justifyContent },
-      padding && styles.padding,
+      m && { margin: spacing * m },
+      mt && { marginTop: spacing * mt },
+      mr && { marginRight: spacing * mr },
+      mb && { marginBottom: spacing * mb },
+      ml && { marginLeft: spacing * ml },
+      mx && {
+        marginRight: spacing * mx,
+        marginLeft: spacing * mx,
+      },
+      my && {
+        marginTop: spacing * my,
+        marginBottom: spacing * my,
+      },
+      p && { padding: spacing * p },
+      pt && { paddingTop: spacing * pt },
+      pr && { paddingRight: spacing * pr },
+      pb && { paddingBottom: spacing * pb },
+      pl && { paddingLeft: spacing * pl },
+      px && {
+        paddingRight: spacing * px,
+        paddingLeft: spacing * px,
+      },
+      py && {
+        paddingTop: spacing * py,
+        paddingBottom: spacing * py,
+      },
       row && styles.row,
       statusBar && styles.statusBar,
       stretch && styles.stretch,

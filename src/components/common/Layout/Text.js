@@ -1,24 +1,16 @@
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
-import { colors } from '../theme';
+import { Text } from 'react-native';
+import { colors, typography } from '../theme';
 
-const styles = StyleSheet.create({
-  text: {
-    letterSpacing: 0.35,
-  },
-  white: {
-    color: colors.white,
-  },
-});
-
-export default ({ color, bold, fontSize, style, ...props }) => (
+export default ({ center, color, size, style, variant, weight, ...props }) => (
   <Text
     style={[
-      color && color === 'white' ? styles.white : { color },
-      bold && { fontWeight: 'bold' },
-      fontSize && { fontSize },
-      styles.text,
+      center && { textAlign: 'center' },
+      color && { color: colors[color] },
+      size && { fontSize: size },
       style,
+      variant && typography[variant],
+      weight && { fontWeight: weight },
     ]}
     {...props}
   />

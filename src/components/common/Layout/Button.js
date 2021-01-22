@@ -72,7 +72,7 @@ export default ({
           )}
           {image && <Image name={image} size={25} style={imageStyle} />}
           <Text
-            color={!textColor ? colors.white : textColor}
+            color={!textColor ? 'white' : textColor}
             style={[styles.text, textStyle]}
           >
             {uppercase ? title.toUpperCase() : title}
