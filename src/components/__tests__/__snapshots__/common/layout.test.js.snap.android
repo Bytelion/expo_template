@@ -1,5 +1,149 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Avatar 1`] = `
+<View
+  style={
+    Array [
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      Array [
+        Object {
+          "backgroundColor": "#888",
+          "borderColor": "#888",
+          "borderWidth": 2,
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 32,
+          "height": 32,
+          "width": 32,
+        },
+      ],
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        Array [
+          Object {
+            "backgroundColor": "#eee",
+            "borderColor": "#888",
+            "borderWidth": 2,
+            "left": "50%",
+            "overflow": "hidden",
+            "position": "absolute",
+            "top": 0,
+          },
+          Object {
+            "borderRadius": 16,
+            "height": 16,
+            "marginLeft": -8,
+            "width": 16,
+          },
+        ],
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        Array [
+          Object {
+            "backgroundColor": "#eee",
+            "borderColor": "#888",
+            "borderWidth": 2,
+            "left": "50%",
+            "overflow": "hidden",
+            "position": "absolute",
+            "top": "50%",
+          },
+          Object {
+            "borderRadius": 32,
+            "height": 32,
+            "marginLeft": -16,
+            "width": 32,
+          },
+        ],
+      ]
+    }
+  />
+</View>
+`;
+
 exports[`CheckBox 1`] = `
 <View
   accessibilityRole="checkbox"
@@ -183,6 +327,20 @@ exports[`ScrollView 1`] = `
 >
   <View />
 </RCTScrollView>
+`;
+
+exports[`Skeleton 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#eee",
+      "borderRadius": 0,
+      "height": undefined,
+      "opacity": 0.012410621929977115,
+      "width": "auto",
+    }
+  }
+/>
 `;
 
 exports[`Text 1`] = `

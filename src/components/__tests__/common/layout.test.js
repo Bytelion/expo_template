@@ -1,8 +1,24 @@
 import React from 'react';
 import { render, waitFor, cleanup } from 'react-native-testing-library';
-import { CheckBox, Icon, Row, ScrollView, Text, View } from '@common/Layout';
+import {
+  Avatar,
+  CheckBox,
+  Icon,
+  Row,
+  ScrollView,
+  Skeleton,
+  Text,
+  View,
+} from '@common/Layout';
 
 afterEach(cleanup);
+
+test('Avatar', async () => {
+  const avatar = await render(<Avatar />);
+  await waitFor(() => avatar);
+  expect(avatar).toBeTruthy();
+  expect(avatar.toJSON()).toMatchSnapshot();
+});
 
 // NOTE: Test is failing with maintained touchable package
 // test('Button', async () => {
@@ -38,6 +54,13 @@ test('ScrollView', async () => {
   await waitFor(() => scrollView);
   expect(scrollView).toBeTruthy();
   expect(scrollView.toJSON()).toMatchSnapshot();
+});
+
+test('Skeleton', async () => {
+  const skeleton = await render(<Skeleton />);
+  await waitFor(() => skeleton);
+  expect(skeleton).toBeTruthy();
+  expect(skeleton.toJSON()).toMatchSnapshot();
 });
 
 test('Text', async () => {
