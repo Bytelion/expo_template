@@ -57,7 +57,7 @@ test('ScrollView', async () => {
 });
 
 test('Skeleton', async () => {
-  const skeleton = await render(<Skeleton />);
+  const skeleton = await render(<Skeleton animate={false} />);
   await waitFor(() => skeleton);
   expect(skeleton).toBeTruthy();
   expect(skeleton.toJSON()).toMatchSnapshot();

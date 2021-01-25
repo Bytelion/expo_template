@@ -333,7 +333,7 @@ exports[`Skeleton 1`] = `
       "backgroundColor": "#eee",
       "borderRadius": 0,
       "height": undefined,
-      "opacity": 0.010203397142684624,
+      "opacity": 1,
       "width": "auto",
     }
   }
