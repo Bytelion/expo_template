@@ -11,10 +11,6 @@ export default (
   action
 ) => {
   switch (action.type) {
-    case actionTypes.SET_REQUEST_PENDING:
-      return { ...state, requestPending: action.payload };
-    case actionTypes.SET_ALERT:
-      return { ...state, alert: action.payload };
     case actionTypes.CLEAR_ALERT:
       return {
         ...state,
@@ -23,6 +19,10 @@ export default (
           message: null,
         },
       };
+    case actionTypes.SET_ALERT:
+      return { ...state, alert: action.payload };
+    case actionTypes.SET_REQUEST_PENDING:
+      return { ...state, requestPending: action.payload };
     default:
       return state;
   }

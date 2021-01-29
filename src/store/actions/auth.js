@@ -3,11 +3,11 @@ import { isEmpty } from 'lodash';
 import { authService } from '@services';
 import actionTypes from './types';
 
-const loadAuth = () => async dispatch => {
+const loadAuth = () => async (dispatch) => {
   const storedItems = {};
   const asyncStorage = await AsyncStorage.multiGet(['username', 'authToken']);
 
-  asyncStorage.map(array =>
+  asyncStorage.map((array) =>
     Object.assign(storedItems, { [array[0]]: array[1] })
   );
 
@@ -15,33 +15,33 @@ const loadAuth = () => async dispatch => {
     type: actionTypes.SET_AUTH,
     payload: {
       hasAuth: !isEmpty(storedItems.authToken),
-      username: storedItems.username,
       authToken: storedItems.authToken,
+      username: storedItems.username,
     },
   });
 };
 
-const authenticate = data => async dispatch => {
+const authenticate = (data) => async (dispatch) => {
   const result = await authService.authenticate(data);
   const { username } = data;
   const authToken = result.data;
 
   await AsyncStorage.multiSet([
-    ['username', username],
     ['authToken', authToken],
+    ['username', username],
   ]);
 
   dispatch({
     type: actionTypes.SET_AUTH,
     payload: {
       hasAuth: true,
-      username,
       authToken,
+      username,
     },
   });
 };
 
-const removeAuth = () => async dispatch => {
+const removeAuth = () => async (dispatch) => {
   await AsyncStorage.multiRemove(['authToken'], () => {
     dispatch({
       type: actionTypes.REMOVE_AUTH,

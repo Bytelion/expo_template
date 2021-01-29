@@ -28,6 +28,7 @@ const LoginScreen = ({ hasAuth, navigation }) => {
   const onSubmit = async () => {
     // For test purposes allowing nav without authToken
     // REMOVE IN PROJECT
+    // await authenticate(data.values);
     navigateHome();
   };
 

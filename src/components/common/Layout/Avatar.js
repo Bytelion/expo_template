@@ -6,7 +6,6 @@ import { colors } from '../theme';
 
 const styles = StyleSheet.create({
   avatarImage: {
-    backgroundColor: colors.grays.bright,
     overflow: 'hidden',
   },
   avatar: {

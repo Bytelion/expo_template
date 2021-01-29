@@ -3,8 +3,8 @@ import actionTypes from '../actions/types';
 export default (
   state = {
     hasAuth: false,
-    username: false,
     authToken: null,
+    username: null,
   },
   action
 ) => {
@@ -13,8 +13,8 @@ export default (
       return {
         ...state,
         hasAuth: action.payload.hasAuth,
-        username: action.payload.username,
         authToken: action.payload.authToken,
+        username: action.payload.username,
       };
     case actionTypes.REMOVE_AUTH:
       return {

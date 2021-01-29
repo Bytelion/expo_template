@@ -8,13 +8,14 @@ import { Icon, Touchable } from '@components/common/Layout';
 import { removeAuth } from '@store/actions/auth';
 
 const logout = (navigation) => {
-  Alert.alert('Logout', `Are you sure you would like to logout?`, [
+  Alert.alert('Logout', 'Are you sure you would like to logout?', [
     { text: 'No', style: 'cancel' },
     {
       text: 'Yes',
       onPress: () => {
-        navigation.goBack(null);
         removeAuth();
+
+        navigation.navigate('SignIn');
       },
     },
   ]);
