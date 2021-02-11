@@ -7,6 +7,12 @@ const productService = {
       url: `/V1/products/${sku}`,
     });
   },
+  getProductByUrl(url) {
+    return client.request({
+      method: 'get',
+      url,
+    });
+  },
   createProduct(data) {
     return client.request({
       method: 'post',

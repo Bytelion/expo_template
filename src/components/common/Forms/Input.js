@@ -65,9 +65,9 @@ class Input extends PureComponent {
             returnKeyType={returnKeyType}
             secureTextEntry={secure}
             style={[
-              error ? styles.inputFieldError : styles.inputFieldDefault,
               styles.inputField,
               style,
+              error ? styles.inputFieldError : styles.inputFieldDefault,
             ]}
             value={value}
           />
