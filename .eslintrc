@@ -54,11 +54,20 @@
     "import/resolver": {
       "alias": {
         "map": [
-          ["@config", "./src/config"],
+          // Make sure to update babel.config.js as well
+          ["@assets", "./src/assets"],
           ["@components", "./src/components"],
+          ["@common", "./src/components/common"],
+          ["@Forms", "./src/components/common/Forms"],
+          ["@Helpers", "./src/components/common/Helpers"],
+          ["@Image", "./src/components/common/Image"],
+          ["@Layout", "./src/components/common/Layout"],
+          ["@theme", "./src/components/common/theme"],
+          ["@config", "./src/config"],
           ["@navigation", "./src/navigation"],
+          ["@screens", "./src/screens"],
           ["@services", "./src/services"],
-          ["@store", "./src/store"]
+          ["@store", "./src/store"],
         ],
         "extensions": [".js"]
       }

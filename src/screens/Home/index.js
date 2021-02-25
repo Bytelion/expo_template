@@ -1,11 +1,12 @@
 import React from 'react';
-import { View } from '@components/common/Layout';
+import { connect } from '@Helpers';
+import { View } from '@Layout';
 import styles from './styles';
 
 const HomeScreen = () => (
   <>
-    <View style={styles.container} />
+    <View style={styles.screenView} />
   </>
 );
 
-export default HomeScreen;
+export default connect()(HomeScreen);

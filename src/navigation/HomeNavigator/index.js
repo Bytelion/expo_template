@@ -6,15 +6,17 @@ import HomeScreen from '@screens/Home';
 import { colors, device } from '@components/common/theme';
 import { Icon, Touchable } from '@components/common/Layout';
 import { removeAuth } from '@store/actions/auth';
+import { base } from '../options';
 
 const logout = (navigation) => {
-  Alert.alert('Logout', `Are you sure you would like to logout?`, [
+  Alert.alert('Logout', 'Are you sure you would like to logout?', [
     { text: 'No', style: 'cancel' },
     {
       text: 'Yes',
       onPress: () => {
-        navigation.goBack(null);
         removeAuth();
+
+        navigation.navigate('SignIn');
       },
     },
   ]);
@@ -25,15 +27,7 @@ const Stack = createStackNavigator();
 const HomeNavigator = () => (
   <Stack.Navigator
     screenOptions={{
-      headerStyle: {
-        backgroundColor: colors.primary.main,
-        borderBottomWidth: 0,
-        shadowRadius: 0,
-        shadowOffset: {
-          height: 0,
-        },
-      },
-      headerTintColor: colors.white,
+      ...base,
     }}
   >
     <Stack.Screen

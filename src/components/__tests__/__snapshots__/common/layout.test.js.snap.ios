@@ -285,6 +285,8 @@ exports[`ScrollView 1`] = `
       undefined,
       undefined,
       undefined,
+      undefined,
+      undefined,
     ]
   }
   contentInset={
@@ -296,7 +298,7 @@ exports[`ScrollView 1`] = `
   enableOnAndroid={true}
   enableResetScrollToCoords={false}
   extraHeight={75}
-  extraScrollHeight={150}
+  extraScrollHeight={0}
   getScrollResponder={[Function]}
   handleOnScroll={[Function]}
   keyboardDismissMode="interactive"

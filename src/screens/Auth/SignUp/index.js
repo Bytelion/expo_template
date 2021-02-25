@@ -1,9 +1,9 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { connect } from '@common/Helpers';
-import { colors } from '@common/theme';
-import { Button, ScrollView, Text, View } from '@common/Layout';
-import Field from '@common/Forms/Field';
+import { connect } from '@Helpers';
+import Field from '@Forms/Field';
+import { Button, ScrollView, Text, View } from '@Layout';
+import { colors } from '@theme';
 import styles from '../styles';
 
 const SignUpScreen = ({ navigation }) => {
@@ -16,9 +16,14 @@ const SignUpScreen = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.mainView}>
-      <ScrollView contentContainerStyle={styles.scrollView}>
-        <View style={styles.scrollViewInner}>
+    <View style={styles.screenView}>
+      <ScrollView contentContainerStyle={styles.scrollView} center>
+        <View
+          style={styles.scrollViewInner}
+          justifyContent="center"
+          px={6}
+          py={2}
+        >
           <View center mb={2}>
             <Text color="white" variant="body2">
               Sign up to get started.

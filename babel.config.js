@@ -6,10 +6,16 @@ module.exports = function (api) {
       [
         'module-resolver',
         {
+          // Make sure to update .eslintrc as well
           alias: {
             '@assets': './src/assets',
-            '@common': './src/components/common',
             '@components': './src/components',
+            '@common': './src/components/common',
+            '@Forms': './src/components/common/Forms',
+            '@Helpers': './src/components/common/Helpers',
+            '@Image': './src/components/common/Image',
+            '@Layout': './src/components/common/Layout',
+            '@theme': './src/components/common/theme',
             '@config': './src/config',
             '@navigation': './src/navigation',
             '@screens': './src/screens',

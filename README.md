@@ -13,6 +13,9 @@ yarn install
 
 // Run project with Expo
 expo start
+
+// Run project with Expo and clear cache
+expo start -c
 ```
 
 ## CircleCI

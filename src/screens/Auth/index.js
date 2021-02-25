@@ -1,16 +1,10 @@
 import React from 'react';
 import Constants from 'expo-constants';
 import { useForm } from 'react-hook-form';
-import Field from '@common/Forms/Field';
-import { connect } from '@components/common/Helpers';
-import { colors } from '@components/common/theme';
-import {
-  Button,
-  ScrollView,
-  View,
-  Text,
-  Touchable,
-} from '@components/common/Layout';
+import Field from '@Forms/Field';
+import { connect } from '@Helpers';
+import { Button, ScrollView, View, Text, Touchable } from '@Layout';
+import { colors } from '@theme';
 import styles from './styles';
 
 const LoginScreen = ({ hasAuth, navigation }) => {
@@ -26,16 +20,24 @@ const LoginScreen = ({ hasAuth, navigation }) => {
   }
 
   const onSubmit = async () => {
-    // For test purposes allowing nav without authToken
     // REMOVE IN PROJECT
+    // For test purposes allowing nav without authToken
+
+    // await authenticate(data.values);
+
     navigateHome();
   };
 
   return (
-    <View style={styles.mainView}>
+    <View style={styles.screenView}>
       <View statusBar />
-      <ScrollView contentContainerStyle={styles.scrollView}>
-        <View style={styles.scrollViewInner}>
+      <ScrollView contentContainerStyle={styles.scrollView} center>
+        <View
+          style={styles.scrollViewInner}
+          justifyContent="center"
+          px={6}
+          py={2}
+        >
           <View style={styles.header} mb={1}>
             <View center mb={4}>
               <Text color="white" variant="h1">
@@ -102,7 +104,7 @@ const LoginScreen = ({ hasAuth, navigation }) => {
 };
 
 export default connect((state) => ({
-  hasAuth: state.auth.hasAuth,
   alert: state.common.alert,
+  hasAuth: state.auth.hasAuth,
   username: state.auth.username,
 }))(LoginScreen);
