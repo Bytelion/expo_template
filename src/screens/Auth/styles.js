@@ -6,12 +6,7 @@ export default StyleSheet.create({
     backgroundColor: colors.primary.main,
     flex: 1,
   },
-  scrollView: {
-    justifyContent: 'center',
-  },
   scrollViewInner: {
-    justifyContent: 'center',
-    marginHorizontal: 60,
-    paddingTop: 120,
+    width: '100%',
   },
 });

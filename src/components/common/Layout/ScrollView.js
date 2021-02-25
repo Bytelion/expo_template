@@ -3,10 +3,13 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import { debug as debugView } from '../theme';
 
 export default ({
+  alignItems,
   center,
   contentContainerStyle,
   debug,
+  extraScrollHeight,
   flex,
+  justifyContent,
   stretch,
   showsVerticalScrollIndicator,
   style,
@@ -14,15 +17,17 @@ export default ({
 }) => (
   <KeyboardAwareScrollView
     contentContainerStyle={[
+      alignItems && { alignItems },
       center && {
         alignItems: 'center',
         flexGrow: 1,
         justifyContent: 'center',
       },
+      justifyContent && { justifyContent },
       contentContainerStyle,
       debug && debugView,
     ]}
-    extraScrollHeight={150}
+    extraScrollHeight={extraScrollHeight}
     enableResetScrollToCoords={false}
     enableOnAndroid
     keyboardShouldPersistTaps="handled"
