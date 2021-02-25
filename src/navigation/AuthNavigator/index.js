@@ -4,6 +4,7 @@ import { colors } from '@components/common/theme';
 import SignInScreen from '@screens/Auth';
 import SignUpScreen from '@screens/Auth/SignUp';
 import WelcomeScreen from '@screens/Auth/Welcome';
+import { knockout } from '../options';
 
 const Stack = createStackNavigator();
 
@@ -11,18 +12,7 @@ const AuthNavigator = () => (
   <Stack.Navigator
     initialRouteName="SignIn"
     screenOptions={{
-      headerShown: false,
-      gestureEnabled: false,
-      headerBackTitle: null,
-      headerStyle: {
-        backgroundColor: colors.primary.main,
-        borderBottomWidth: 0,
-        shadowRadius: 0,
-        shadowOffset: {
-          height: 0,
-        },
-      },
-      headerTintColor: colors.white,
+      ...knockout,
     }}
   >
     <Stack.Screen name="SignIn" component={SignInScreen} />

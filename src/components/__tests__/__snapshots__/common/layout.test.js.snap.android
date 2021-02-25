@@ -1,0 +1,396 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar 1`] = `
+<View
+  style={
+    Array [
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      Array [
+        Object {
+          "backgroundColor": "#888",
+          "borderColor": "#888",
+          "borderWidth": 2,
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 32,
+          "height": 32,
+          "width": 32,
+        },
+      ],
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        Array [
+          Object {
+            "backgroundColor": "#eee",
+            "borderColor": "#888",
+            "borderWidth": 2,
+            "left": "50%",
+            "overflow": "hidden",
+            "position": "absolute",
+            "top": 0,
+          },
+          Object {
+            "borderRadius": 16,
+            "height": 16,
+            "marginLeft": -8,
+            "width": 16,
+          },
+        ],
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        Array [
+          Object {
+            "backgroundColor": "#eee",
+            "borderColor": "#888",
+            "borderWidth": 2,
+            "left": "50%",
+            "overflow": "hidden",
+            "position": "absolute",
+            "top": "50%",
+          },
+          Object {
+            "borderRadius": 32,
+            "height": 32,
+            "marginLeft": -16,
+            "width": 32,
+          },
+        ],
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`CheckBox 1`] = `
+<View
+  accessibilityRole="checkbox"
+  accessibilityState={
+    Object {
+      "checked": false,
+    }
+  }
+  accessible={true}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderWidth": 0,
+      "margin": 5,
+      "marginLeft": 0,
+      "marginRight": 10,
+      "opacity": 1,
+      "padding": 0,
+    }
+  }
+  testID="checkbox"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "#bfbfbf",
+            "fontSize": 24,
+          },
+          Object {
+            "minWidth": 24,
+          },
+          Object {
+            "fontFamily": "material",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Icon 1`] = `
+<Text
+  allowFontScaling={false}
+  style={
+    Array [
+      Object {
+        "color": undefined,
+        "fontSize": 12,
+      },
+      Array [
+        Object {
+          "color": "#aaa",
+        },
+        undefined,
+      ],
+      Object {
+        "fontFamily": "material",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  
+</Text>
+`;
+
+exports[`Row 1`] = `
+<View
+  style={
+    Array [
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      Object {
+        "flexDirection": "row",
+      },
+      undefined,
+      undefined,
+      Array [
+        undefined,
+        undefined,
+        undefined,
+      ],
+    ]
+  }
+/>
+`;
+
+exports[`ScrollView 1`] = `
+<RCTScrollView
+  automaticallyAdjustContentInsets={false}
+  contentContainerStyle={
+    Array [
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+  contentInset={
+    Object {
+      "bottom": 0,
+    }
+  }
+  enableAutomaticScroll={true}
+  enableOnAndroid={true}
+  enableResetScrollToCoords={false}
+  extraHeight={75}
+  extraScrollHeight={0}
+  getScrollResponder={[Function]}
+  handleOnScroll={[Function]}
+  keyboardDismissMode="interactive"
+  keyboardOpeningTime={250}
+  keyboardShouldPersistTaps="handled"
+  keyboardSpace={0}
+  onScroll={[Function]}
+  resetKeyboardSpace={[Function]}
+  scrollEventThrottle={1}
+  scrollForExtraHeightOnAndroid={[Function]}
+  scrollIntoView={[Function]}
+  scrollToEnd={[Function]}
+  scrollToFocusedInput={[Function]}
+  scrollToPosition={[Function]}
+  showsVerticalScrollIndicator={false}
+  style={
+    Array [
+      undefined,
+      undefined,
+      undefined,
+    ]
+  }
+  update={[Function]}
+  viewIsInsideTabBar={false}
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`Skeleton 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#eee",
+      "borderRadius": 0,
+      "height": undefined,
+      "opacity": 1,
+      "width": "auto",
+    }
+  }
+/>
+`;
+
+exports[`Text 1`] = `
+<Text
+  style={
+    Array [
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+    ]
+  }
+/>
+`;
+
+exports[`View 1`] = `
+<View
+  style={
+    Array [
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+    ]
+  }
+/>
+`;
