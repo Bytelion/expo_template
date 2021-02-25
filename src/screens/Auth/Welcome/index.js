@@ -21,7 +21,7 @@ const WelcomeScreen = ({ navigation }) => {
   const noEmailText = "Didn't recieve an email?";
 
   return (
-    <View style={styles.mainView}>
+    <View style={styles.screenView}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.scrollViewInner}>
           <View center mb={2}>
@@ -57,7 +57,7 @@ const WelcomeScreen = ({ navigation }) => {
 };
 
 export default connect((state) => ({
-  hasAuth: state.auth.hasAuth,
   alert: state.common.alert,
+  hasAuth: state.auth.hasAuth,
   username: state.auth.username,
 }))(WelcomeScreen);

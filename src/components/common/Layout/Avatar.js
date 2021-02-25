@@ -34,12 +34,12 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ({ image, size = 32 }) => (
+export default ({ size = 32, uri }) => (
   <>
-    {image ? (
+    {uri ? (
       <Image
         source={{
-          uri: image,
+          uri,
         }}
         style={[
           styles.avatarImage,

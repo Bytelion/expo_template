@@ -16,7 +16,7 @@ const SignUpScreen = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.mainView}>
+    <View style={styles.screenView}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.scrollViewInner}>
           <View center mb={2}>

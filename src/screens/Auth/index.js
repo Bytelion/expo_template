@@ -33,7 +33,7 @@ const LoginScreen = ({ hasAuth, navigation }) => {
   };
 
   return (
-    <View style={styles.mainView}>
+    <View style={styles.screenView}>
       <View statusBar />
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.scrollViewInner}>
@@ -103,7 +103,7 @@ const LoginScreen = ({ hasAuth, navigation }) => {
 };
 
 export default connect((state) => ({
-  hasAuth: state.auth.hasAuth,
   alert: state.common.alert,
+  hasAuth: state.auth.hasAuth,
   username: state.auth.username,
 }))(LoginScreen);
