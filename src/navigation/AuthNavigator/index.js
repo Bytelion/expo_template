@@ -1,6 +1,5 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { colors } from '@components/common/theme';
 import SignInScreen from '@screens/Auth';
 import SignUpScreen from '@screens/Auth/SignUp';
 import WelcomeScreen from '@screens/Auth/Welcome';
