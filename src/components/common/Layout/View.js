@@ -20,11 +20,17 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
   },
+  spaceBetween: {
+    justifyContent: 'space-between',
+  },
   statusBar: {
     height: device.statusBarHeight,
   },
   stretch: {
     alignSelf: 'stretch',
+  },
+  wrap: {
+    flexWrap: 'wrap',
   },
 });
 
@@ -52,9 +58,11 @@ export default ({
   px,
   py,
   row,
+  spaceBetween,
   statusBar,
   stretch,
   style,
+  wrap,
   ...props
 }) => (
   <View
@@ -94,8 +102,10 @@ export default ({
         paddingBottom: spacing * py,
       },
       row && styles.row,
+      spaceBetween && styles.spaceBetween,
       statusBar && styles.statusBar,
       stretch && styles.stretch,
+      wrap && styles.wrap,
       style,
     ]}
     {...props}
