@@ -58,30 +58,23 @@ const debug = {
 const spacing = 8;
 
 const typography = {
-  fontFamily: 'Roboto',
   h1: {
     fontSize: 34,
-    fontWeight: '700',
   },
   h2: {
     fontSize: 30,
-    fontWeight: '700',
   },
   h3: {
     fontSize: 26,
-    fontWeight: '400',
   },
   h4: {
     fontSize: 22,
-    fontWeight: '400',
   },
   h5: {
     fontSize: 18,
-    fontWeight: '400',
   },
   h6: {
     fontSize: 16,
-    fontWeight: '400',
     textTransform: 'uppercase',
   },
   subtitle1: {},
