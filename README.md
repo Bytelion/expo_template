@@ -3,9 +3,10 @@
 This template is built to start a barebones React Native project using Expo.
 The current Expo version is [Expo SDK 40](https://blog.expo.io/expo-sdk-40-is-now-available-d4d73e67da33).
 
-## Project Setup
+## Expo Project Setup
 ### Install Expo CLI
 Install the latest version of the [Expo CLI](https://docs.expo.io/versions/latest/get-started/installation/).
+
 ### Terminal Setup
 ```javascript
 // Install the dependencies
@@ -17,6 +18,23 @@ expo start
 // Run project with Expo and clear cache
 expo start -c
 ```
+
+## React Native CLI Setup
+While our template works primarily with Expo, we understand that not every project will be able to use Expo. The following steps help in unbaking Expo from this template
+
+### Install React Native CLI
+Currently supports Android emulation without Expo.
+
+Follow the installation guide from [React Native CLI](https://reactnative.dev/docs/environment-setup).
+Essentially the android/ios folders will need to be created and hooked up appropriately as with any bare setup.
+
+```
+yarn add react-native
+yarn install
+yarn run android:vanilla
+```
+
+The index.js file within the root of the project is the entry point for this approach which points to @/components/App-Expoless.
 
 ## CircleCI
 The following is run when a commit is pushed to GitHub. Currently the publish job is commented out because it is not tied to an expo account.

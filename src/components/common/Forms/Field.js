@@ -10,10 +10,10 @@ const Field = ({ defaultValue = '', form, name, ref, rules, ...props }) => {
       control={control}
       defaultValue={defaultValue}
       name={name}
-      render={({ onChange, onBlur, value }) => (
+      render={({ field: { onChange, onBlur, value } }) => (
         <Input
           {...props}
-          error={errors[name]}
+          error={errors ? errors[name] : false}
           onBlur={onBlur}
           onChangeText={(text) => onChange(text)}
           value={value}

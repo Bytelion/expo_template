@@ -1,8 +1,6 @@
 import { Dimensions } from 'react-native';
-import Constants from 'expo-constants';
 
 const { width, height } = Dimensions.get('window');
-const { statusBarHeight } = Constants;
 const aspectRatio = width / height;
 
 const boxShadow = {
@@ -47,7 +45,6 @@ const device = {
   width,
   height,
   aspectRatio,
-  statusBarHeight,
 };
 
 const debug = {

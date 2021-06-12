@@ -1,4 +1,6 @@
 {
+  "name": "AwesomeProject",
+  "displayName": "AwesomeProject",
   "expo": {
     "name": "Expo Template",
     "icon": "./src/assets/images/appIcon.png",

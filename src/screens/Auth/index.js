@@ -1,5 +1,4 @@
 import React from 'react';
-import Constants from 'expo-constants';
 import { useForm } from 'react-hook-form';
 import Field from '@Forms/Field';
 import { connect } from '@Helpers';
@@ -41,7 +40,7 @@ const LoginScreen = ({ hasAuth, navigation }) => {
           <View style={styles.header} mb={1}>
             <View center mb={4}>
               <Text color="white" variant="h1">
-                {Constants.manifest.name}
+                App Name
               </Text>
             </View>
             <View center>

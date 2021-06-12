@@ -1,10 +1,9 @@
 import React from 'react';
 import { Alert } from 'react-native';
-import Constants from 'expo-constants';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from '@screens/Home';
-import { colors, device } from '@components/common/theme';
-import { Icon, Touchable } from '@components/common/Layout';
+import { Touchable } from '@components/common/Layout';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import { removeAuth } from '@store/actions/auth';
 import { base } from '../options';
 
@@ -34,19 +33,14 @@ const HomeNavigator = () => (
       name="Home"
       component={HomeScreen}
       options={({ navigation }) => ({
-        title: Constants.manifest.name,
+        title: 'HomeNavigator',
         headerLeft: () => {},
         headerRight: () => (
           <Touchable
             onPress={() => logout(navigation)}
             style={{ marginRight: 10 }}
           >
-            <Icon
-              name="logout"
-              size={device.width * 0.075}
-              color={colors.white}
-              community
-            />
+            <Icon name="exit-to-app" size={30} color="#fff" />
           </Touchable>
         ),
       })}

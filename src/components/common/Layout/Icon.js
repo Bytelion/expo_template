@@ -1,5 +1,6 @@
 import React from 'react';
-import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { colors } from '../theme';
 
 export default ({ color, community, style, ...props }) => {
